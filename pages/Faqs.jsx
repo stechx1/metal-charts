@@ -5,7 +5,7 @@ function Faqs() {
     {
       question: "What is MetalCharts? ",
       answer:
-        "MetalCharts is an intermediary online stock trading platform that bargains in Gold and Crude oil  for an individual to purchase, sell, and store. We go about as a mediator between the traders. For instance, Client A purchases a commodity from the organization, after a while if he/she chooses to sell the commodity we will provide Client B, then the two of them would collaborate on the organization's platform for efficient, secured and effective trade or sell back to company",
+        "MetalCharts is an intermediary online stock trading platform that bargains in Gold and Crude oil for an individual to purchase, sell, and store. We go about as a mediator between the traders. For instance, Client A purchases a commodity and after a while if user chooses to sell the commodity we will provide Client B, then the two of them would collaborate on the organization's platform for efficient, secured and effective trade",
     },
     {
       question: "Why are there additional security measures?",
@@ -15,7 +15,7 @@ function Faqs() {
     {
       question: "How long does an exchange take?",
       answer: `
-      Trade duration is determined by method of payment which are faster instantly (Credit/Debt card). On MetalCharts, deposit,withdrawal and Peer-2-Peer transactions need to be confirmed before the buyer sends payment. Commodity transactions take minimum 5minutes to confirm, so with quick traders and quick payment method.MetalCharts trade can be completed in a matter of minutes.
+      Trade duration is determined by method of payment which are faster and instantly. On MetalCharts purchase,withdrawal and Peer-2-Peer transactions need to be confirmed before the buyer sends payment. Commodity transactions take minimum 5minutes to confirm, so with quick traders and quick payment method.MetalCharts trade can be completed in a matter of minutes.
          `,
     },
     {
@@ -25,17 +25,17 @@ function Faqs() {
     },
     {
       question: "What methods of payment does MetalCharts offer?",
-      answer: "You can currently buy Gold and Brent crude oil via Credit/Debt card.",
+      answer: "You can currently buy Gold and Brent crude oil by the method of payment the Seller provide and the one suitable for the Buyer.",
     },
     {
       question:
         "Does MetalCharts facilitates trading between buyers and sellers?",
       answer:
-        "Yes.  MetalCharts facilitates trading between buyers and sellers. We also sell out of our inventory to our customers",
+        "Yes. MetalCharts facilitates trading between buyers and sellers.",
     },
     {
       question: "Is there any charges on Metalcharts?",
-      answer: "Yes Peer-2-Peer service charge is 2%",
+      answer: "No Peer-2-Peer service charge is 0%.",
     },
     {
       question: "Can I fix my own price on commodity",
@@ -45,11 +45,6 @@ function Faqs() {
     {
       question: "How long will withdrawal takes?",
       answer: "Withdrawal takes minimum of 5 minutes to maximum of 24 hours",
-    },
-    {
-      question: "What is the transaction charges if am selling to Metalcharts?",
-      answer:
-        "Transaction fee Selling to Metalchatrs is 5%",
     },
     {
       question: "Hope Metalcharts is not a ponzi scheme?",
@@ -69,15 +64,14 @@ function Faqs() {
     },
     {
       question: "How can i purchase commodities on MetalCharts?",
-      answer: `
-      Yes!! We have two method of purchase.(1) Buying from MetalCharts (2) Purchase via Peer-2-Peer.
-         `,
+      answer: `You can purchase commodity via Peer-2-Peer.
+      `,
     },
     {
       question: "How can i Sell my commodities",
       answer: `
-      On Metalcharts we have two method of selling commodities.(1) Sell to MetalCharts (2) Sell via Peer-2-Peer.
-         `,
+      On Metalcharts you can Sell commodities via Peer-2-Peer.
+      `,
     },
     {
       question: "How do I protect myself against fraud? ",

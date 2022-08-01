@@ -62,10 +62,7 @@ function HowWorks({ data }) {
     {
       title: "Buy commodities",
       img: buy,
-      details: `On our platform you can buy numerous volume of commodities you
-      wish to stock up in your portfolio. You can currently buy gold and
-      crude oil with a credit card, and debit card for safekeeping and
-      growth of your investment.`,
+      details: `On our platform you can buy numerous volume of commodities you wish to stock up in your portfolio. You can currently buy Gold and Brent crude oil with any user you pleased with for safekeeping and growth of your investment.`,
     },
     {
       title: "Sell, make Profit",
@@ -158,11 +155,9 @@ function P2PWorks() {
                 HOW TO BUY COMMODITY
               </h2>
               <p className="text-justify font-light">
-                <b>We have two method of purchasing commodity:</b>
+                <b>We have a method of purchasing commodity:</b>
                 <br />
-                1. Purchase from MetalCharts
-                <br />
-                2. Purchase PEER 2 PEER
+                  Purchase PEER 2 PEER
                 <br />
               </p>
 
@@ -270,9 +265,7 @@ function P2PWorks() {
               information about buyers and sellers.
             </p>
             <p>
-              So you can buy commodity with credit card or debt card and start
-              trading on Metalcharts peer-to-peer to make a crypto-fiat
-              transaction.
+              So you can buy commodity  with the method the seller provided and start trading on Metalcharts peer-to-peer to make a crypto-fiat transaction.
             </p>
           </div>
         </div>

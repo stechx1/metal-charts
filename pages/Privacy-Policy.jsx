@@ -651,11 +651,7 @@ function Privacy() {
               <span className="mr-2 inline-block font-bold text-blue-900">
                 7.1.
               </span>
-              The data controller responsible for your personal data is
-              MetalCharts, 483 Green Lanes, London, N13 4BS. If you have any
-              questions about this Privacy Policy, your rights and/or our data
-              collection practices, please contact our customer care
-              support@metalcharts.net
+              The data controller responsible for your personal data is MetalCharts, you can reach out to us via Whatsapp, Telegram, Instagram and Twitter If you have any questions about Metalcharts. Your rights and/or our data collection practices, please contact our customer care support@metalcharts.net
             </p>
           </div>
         </div>
