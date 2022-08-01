@@ -94,7 +94,7 @@ function Sell() {
         <div className="text-center font-light text-white">
           <p>
             Looking to Buy?{" "}
-            <Link href="/Buysell">
+            <Link href="/user/Buy">
               <a className="font-medium underline hover:no-underline">
                 Buy Now
               </a>
@@ -437,34 +437,6 @@ function SellGold({ price, percentage }) {
               </label>
             </div>
 
-            <div className="ml-1 flex w-1/2">
-              <input
-                type="radio"
-                name="type"
-                id="metalcharts"
-                className="peer sr-only"
-                value="metalcharts"
-                onChange={(e) => {
-                  setData((prev) => {
-                    return { ...prev, to: e.target.value };
-                  });
-                }}
-                checked={data.to === "metalcharts"}
-              />
-
-              <label
-                htmlFor="metalcharts"
-                className="flex h-full w-full cursor-pointer flex-col rounded-lg border-2 border-gray-300 p-2 text-blue-800
-                 hover:bg-gray-100 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-green-500"
-              >
-                <h2 className="text-center text-base font-semibold">
-                  Metalcharts
-                </h2>
-                <p className="text-center text-xs">
-                  Transaction Fee: {percentage.metalcharts}%
-                </p>
-              </label>
-            </div>
           </div>
         </div>
 

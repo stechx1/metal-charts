@@ -24,7 +24,7 @@ function Trading() {
 
 							<div className="flex flex-col justify-between md:flex-row">
 								<div className="flex w-full flex-col text-blue-900 md:w-[49%]">
-									<Link href="/Buysell">
+									<Link href="/user/Buy">
 										<a className="btn-green py-2 text-center">Buy Now</a>
 									</Link>
 								</div>
@@ -53,7 +53,7 @@ function Trading() {
 
 							<div className="flex flex-col justify-between md:flex-row">
 								<div className="flex w-full flex-col text-blue-900 md:my-0 md:w-[49%]">
-									<Link href="/Buysell">
+									<Link href="/user/Buy">
 										<a className="btn-green py-2 text-center">Buy Now</a>
 									</Link>
 								</div>

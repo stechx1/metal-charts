@@ -21,7 +21,7 @@ function Navbar({ user }) {
   const navbar = [
     { title: "About", link: "/About", blank: false },
     { title: "Trade", link: "/Trade", blank: false },
-    { title: "Buy & Sell", link: "/Buysell", blank: false },
+    { title: "Buy & Sell", link: "/user/Sell", blank: false },
     { title: "Trade News", link: "http://metalchartsnews.com/", blank: true },
   ];
 

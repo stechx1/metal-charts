@@ -59,11 +59,11 @@ function Footer() {
                 Useful Links
               </h3>
               <div className="flex flex-col">
-                <Link href="/Buysell">
+                <Link href="/user/Buy">
                   <a className="nav-item">Buy Gold</a>
                 </Link>
 
-                <Link href="/Buysell">
+                <Link href="/user/Buy">
                   <a className="nav-item">Buy Brent Crude Oil</a>
                 </Link>
 

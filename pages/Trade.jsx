@@ -91,7 +91,7 @@ function HowWorks({ data }) {
               global commodity market
             </p>
 
-            <Link href={data && data.data === "" ? "/Login" : "/Buysell"}>
+            <Link href={data && data.data === "" ? "/Login" : "/user/Buy"}>
               <a className="btn-primary mt-2 animate-pulse px-4">Trade Now!</a>
             </Link>
           </div>
