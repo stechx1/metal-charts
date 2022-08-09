@@ -3,8 +3,10 @@ import { useState, useEffect } from "react";
 import RealTimeWidget from "../components/RealTimeWidget";
 import CurrencyInput from "react-currency-input-field";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 import { usePaystackPayment } from "react-paystack";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 let bank; //user bank details
 let usd; // exchange rate
@@ -228,6 +230,8 @@ function BuyGold() {
 }
 
 function BuyGoldCard({ name, data }) {
+  const [sellerToken, setSellerToken] = useLocalStorage("sellerToken", '');
+  const router = useRouter();
   // initalizing paystack payment
   const config = {
     publicKey: "pk_test_25f1390fdb194da4c07d224401eb1e748fff82b1",
@@ -247,7 +251,10 @@ function BuyGoldCard({ name, data }) {
   // initiate payment popup
   const buynow = async () => {
     if (bank.email) {
-      initializePayment(onSuccess, onClose);
+      console.log("Data from buy now", data);
+      // initializePayment(onSuccess, onClose);
+      setSellerToken(data.seller)
+      router.push('/user/buy-from-seller')
     } else {
       alert(
         "You cant buy right now, firstly goto Dashboard -> Profile -> Bank and complete your bank account details"
@@ -306,9 +313,9 @@ function BuyUKOIL() {
   const changeHandler = (e) => {
     // console.log(e)
     if (e < 5) {
-      setError("Amount Must be Morethan 5$");
+      setError("Amount Must be More than 5$");
     } else if (e > 20000) {
-      setError("Amount Must be Lessthan 20000$");
+      setError("Amount Must be Less than 20000$");
     } else {
       setError("");
       fetchData(e);
