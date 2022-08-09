@@ -13,12 +13,7 @@ export default async function handler(req, res) {
     
     switch (req.method) { 
       case "POST": {
-        const bankDetails = await Bank.findOne({token})
-        res.status(200).json(bankDetails);
-      }
-      case "GET": {
-        const {sellerToken} = req.query;
-        const sellerDetails = await User.findOne({token: sellerToken})
+        const sellerDetails = await User.findOne({token})
         res.status(200).json(sellerDetails);
       }
     }

@@ -231,6 +231,7 @@ function BuyGold() {
 
 function BuyGoldCard({ name, data }) {
   const [sellerToken, setSellerToken] = useLocalStorage("sellerToken", '');
+  const [sellingCommodityDetails, setsellingCommodityDetails] = useLocalStorage("sellingCommodityDetails", '');
   const router = useRouter();
   // initalizing paystack payment
   const config = {
@@ -254,6 +255,7 @@ function BuyGoldCard({ name, data }) {
       console.log("Data from buy now", data);
       // initializePayment(onSuccess, onClose);
       setSellerToken(data.seller)
+      setsellingCommodityDetails(data)
       router.push('/user/buy-from-seller')
     } else {
       alert(
