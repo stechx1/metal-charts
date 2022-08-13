@@ -10,7 +10,6 @@ export default async function handler(req, res) {
     switch (req.method) {
       case "GET": {
         const token = getCookie("user", { req, res });
-        // console.log(token);
         const user = await User.aggregate([
           {
             $match: {
@@ -19,7 +18,7 @@ export default async function handler(req, res) {
           },
           {
             $project: {
-              _id: 0,
+              _id: 1,
               name: 1,
               email: 1,
               username: 1,
