@@ -89,7 +89,7 @@ const ChatPage = () => {
 
   return (
     <div>
-    <div className="flex-1 p:2 sm:p-6 justify-between flex flex-col max-w-[900px] mx-auto min-h-[500px]">
+    <div className="overflow-y-scroll flex-1 p:2 sm:p-6 justify-between flex flex-col max-w-[900px] mx-auto h-[600px]">
    <div className="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
       <div className="relative flex items-center space-x-4">
          <div className="flex flex-col leading-tight">

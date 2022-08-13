@@ -28,10 +28,6 @@ const OrderSchema = new mongoose.Schema({
       type: String,
       default: "pending",
     },
-    created_at: {
-      type: Date,
-      default: Date.now(),
-    },
   },
   {timestamps: true}
 );
