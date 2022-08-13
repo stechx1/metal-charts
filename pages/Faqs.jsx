@@ -25,7 +25,8 @@ function Faqs() {
     },
     {
       question: "What methods of payment does MetalCharts offer?",
-      answer: "You can currently buy Gold and Brent crude oil by the method of payment the Seller provide and the one suitable for the Buyer.",
+      answer:
+        "You can currently buy Gold and Brent crude oil by the method of payment the Seller provide and the one suitable for the Buyer.",
     },
     {
       question:
@@ -89,22 +90,30 @@ function Faqs() {
     {
       question: "When can i sell my commodity for payout?",
       answer: `With Metalcharts you decide when to sell your commodity at your own time.`,
-    }
+    },
   ];
 
   return (
     <section className="min-h-screen">
       <div className="mycontainer flex flex-col">
-         <h2 className="mx-2 mt-20 mb-4 text-2xl lg:text-4xl font-bold text-blue-900">Most Frequantly Asked Questions:</h2>
-         {
-            faqs.map((item,id)=>{
-               return <MyCollapsible key={id} question={item.question} answer={item.answer} />
-            })
-         }
-         <div className="mx-2 my-8 text-center">
-            <h3 className="text-xl lg:text-2xl font-bold text-blue-900">Still Have Questions?</h3>
-            <p className="font-light">Contact us via Support@metalcharts.net</p>
-         </div>
+        <h2 className="mx-2 mt-20 mb-4 text-2xl font-bold text-blue-900 lg:text-4xl">
+          Most Frequantly Asked Questions:
+        </h2>
+        {faqs.map((item, id) => {
+          return (
+            <MyCollapsible
+              key={id}
+              question={item.question}
+              answer={item.answer}
+            />
+          );
+        })}
+        <div className="mx-2 my-8 text-center">
+          <h3 className="text-xl font-bold text-blue-900 lg:text-2xl">
+            Still Have Questions?
+          </h3>
+          <p className="font-light">Contact us via Support@metalcharts.net</p>
+        </div>
       </div>
     </section>
   );
@@ -112,7 +121,12 @@ function Faqs() {
 
 function MyCollapsible({ question, answer }) {
   return (
-    <Collapsible trigger={question} classParentString="collapsible" className="border-blue-300 shadow-lg" openedClassName="border-green-500 shadow-xl">
+    <Collapsible
+      trigger={question}
+      classParentString="collapsible"
+      className="border-blue-300 shadow-lg"
+      openedClassName="border-green-500 shadow-xl"
+    >
       <p>{answer}</p>
     </Collapsible>
   );

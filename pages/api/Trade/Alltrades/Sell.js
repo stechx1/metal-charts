@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     // database
     await database();
 
-    switch (req.method) {  
+    switch (req.method) {
       case "GET": {
         const user = await getCookie("user", { req, res });
 

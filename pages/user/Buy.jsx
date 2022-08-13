@@ -109,7 +109,7 @@ function Gold({ changeTrade, val, price }) {
   );
 }
 
-function UKOIL({ changeTrade, val, price  }) {
+function UKOIL({ changeTrade, val, price }) {
   return (
     <div className="my-8 flex flex-col overflow-hidden rounded-md border border-gray-700 lg:flex-row">
       <div className="h-[300px] w-full overflow-y-scroll border-slate-700 md:h-[400px] lg:h-[500px] lg:w-1/3 lg:border-r">
@@ -230,8 +230,11 @@ function BuyGold() {
 }
 
 function BuyGoldCard({ name, data }) {
-  const [sellerToken, setSellerToken] = useLocalStorage("sellerToken", '');
-  const [sellingCommodityDetails, setsellingCommodityDetails] = useLocalStorage("sellingCommodityDetails", '');
+  const [sellerToken, setSellerToken] = useLocalStorage("sellerToken", "");
+  const [sellingCommodityDetails, setsellingCommodityDetails] = useLocalStorage(
+    "sellingCommodityDetails",
+    ""
+  );
   const router = useRouter();
   // initalizing paystack payment
   const config = {
@@ -254,9 +257,9 @@ function BuyGoldCard({ name, data }) {
     if (bank.email) {
       console.log("Data from buy now", data);
       // initializePayment(onSuccess, onClose);
-      setSellerToken(data.seller)
-      setsellingCommodityDetails(data)
-      router.push('/user/buy-from-seller')
+      setSellerToken(data.seller);
+      setsellingCommodityDetails(data);
+      router.push("/user/buy-from-seller");
     } else {
       alert(
         "You cant buy right now, firstly goto Dashboard -> Profile -> Bank and complete your bank account details"

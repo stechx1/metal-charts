@@ -1,11 +1,12 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const OrderSchema = new mongoose.Schema({
+const OrderSchema = new mongoose.Schema(
+  {
     sellerId: {
-      type: String
+      type: String,
     },
     buyerId: {
-      type: String
+      type: String,
     },
     amount: {
       type: Number,
@@ -29,8 +30,7 @@ const OrderSchema = new mongoose.Schema({
       default: "pending",
     },
   },
-  {timestamps: true}
+  { timestamps: true }
 );
-
 
 export default mongoose.models.order || mongoose.model("order", OrderSchema);

@@ -32,7 +32,7 @@ export default async function handler(req, res) {
                       $and: [
                         { $eq: ["$amount", Number(amount)] },
                         { $eq: ["$seller", "$$userId"] },
-                        { $eq: ["$commodity", "UKOIL"]}
+                        { $eq: ["$commodity", "UKOIL"] },
                       ],
                     },
                   },

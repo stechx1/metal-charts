@@ -4,33 +4,37 @@ function Terms() {
   return (
     <section>
       <div className="mycontainer">
-        <h1 className="mt-16 text-4xl font-bold text-blue-900">Terms of Service</h1>
-        <p className="font-light my-4 text-justify">
+        <h1 className="mt-16 text-4xl font-bold text-blue-900">
+          Terms of Service
+        </h1>
+        <p className="my-4 text-justify font-light">
           Welcome to
           <Link
             href="http://MetalCharts.net"
             target="_blank"
             rel="noopener noreferrer"
           >
-             <a>MetalCharts.net</a>
+            <a>MetalCharts.net</a>
           </Link>
           Please read through these Terms of Service, Acceptable Use Policy and
           our Privacy Policy carefully before start using the services. Privacy
           Policy includes our Cookie Policy.
         </p>
-        <p className="font-light my-4 text-justify">
+        <p className="my-4 text-justify font-light">
           MetalCharts is an online trading platform for buying and selling gold
           and crude oil. As part of its services, MetalCharts also helps to
           resolve disputes if such should arise between buyers and sellers.
           MetalCharts does not become party to any trade concluded by its users.
           Users may be natural persons or legal entities. All mandatory
           statutory consumer protection laws and regulations applicable in the
-          country of the consumers&apos; residence apply, to the extent that those
-          laws and regulations provide more extensive protection than the
+          country of the consumers&apos; residence apply, to the extent that
+          those laws and regulations provide more extensive protection than the
           protection set out in these Terms of Service.
         </p>
-        <h2 className="mt-10 text-justify block text-2xl font-bold text-blue-900">Acceptance of the Terms</h2>
-        <p className="font-light my-4 text-justify">
+        <h2 className="mt-10 block text-justify text-2xl font-bold text-blue-900">
+          Acceptance of the Terms
+        </h2>
+        <p className="my-4 text-justify font-light">
           Before using any of our services, you must first agree to these Terms
           of Service and the Privacy Policy. By accessing our services or by
           otherwise using them, you confirm that you agree to these Terms of
@@ -43,8 +47,10 @@ function Terms() {
           (18) years of age. You affirm that you have the right, power, capacity
           and authority to lawfully enter into this Agreement.
         </p>
-        <h2 className="mt-10 text-justify block text-2xl font-bold text-blue-900">Change of Terms</h2>
-        <p className="font-light my-4 text-justify">
+        <h2 className="mt-10 block text-justify text-2xl font-bold text-blue-900">
+          Change of Terms
+        </h2>
+        <p className="my-4 text-justify font-light">
           We have the right, at our sole discretion, to make adjustments and
           updates to the details of this Agreement to reflect changes in
           innovation, guidelines, enactment, managerial or strategic approaches,
@@ -57,7 +63,7 @@ function Terms() {
           obligations, withdrawing any remaining balances and closing down your
           account.
         </p>
-        <p className="font-light my-4 text-justify">
+        <p className="my-4 text-justify font-light">
           We also have the right, at our sole discretion, to make modifications
           and revisions to the services and the terms of this Agreement at any
           time which are due to security or compliance reasons, or for reasons
@@ -65,8 +71,10 @@ function Terms() {
           our site and notified to you immediately.
         </p>
 
-        <h2 className="mt-10 text-justify block text-2xl font-bold text-blue-900">Registration and User Account</h2>
-        <p className="font-light my-4 text-justify">
+        <h2 className="mt-10 block text-justify text-2xl font-bold text-blue-900">
+          Registration and User Account
+        </h2>
+        <p className="my-4 text-justify font-light">
           To use our services, you must first register with us by creating a
           user account. An account will only be issued once you have provided
           all necessary information required by us for registration and the
@@ -81,7 +89,7 @@ function Terms() {
           complete, we have the right to refuse your access to the site, or any
           of its resources, and to deny, terminate or suspend your account.
         </p>
-        <p className="font-light my-4 text-justify">
+        <p className="my-4 text-justify font-light">
           A person may have more than one account at a time. You may not use the
           services or create an account on behalf of someone other than
           yourself. You may not act as an intermediary or broker. You are not
@@ -89,7 +97,7 @@ function Terms() {
           account or any detail necessary to access your account to anyone other
           than yourself.
         </p>
-        <p className="font-light my-4 text-justify">
+        <p className="my-4 text-justify font-light">
           You are responsible for maintaining adequate security and control of
           your username, password, authentication code or any other code or
           credential that you use to access the services. You must not provide
@@ -102,8 +110,10 @@ function Terms() {
           You are responsible for all the obligations which have arisen up until
           the termination.
         </p>
-        <h2 className="mt-10 text-justify block text-2xl font-bold text-blue-900">Company Accounts</h2>
-        <p className="font-light my-4 text-justify">
+        <h2 className="mt-10 block text-justify text-2xl font-bold text-blue-900">
+          Company Accounts
+        </h2>
+        <p className="my-4 text-justify font-light">
           If you wish to use our services as a legal entity you are required to
           register an account in the name of that entity as the main account for
           that entity. When creating a company account, you confirm that you are
@@ -119,7 +129,7 @@ function Terms() {
           price in the same payment method category in the same country).
           Identity Verification
         </p>
-        <p className="font-light my-4 text-justify">
+        <p className="my-4 text-justify font-light">
           To guarantee MetalCharts stays a protected stage for the entirety of
           our clients, and for us to conform to obligatory legitimate
           commitments which we are exposed to, we may expect you to confirm your
@@ -136,8 +146,10 @@ function Terms() {
           well as gold or crude oil transactions that you have sent or received
           from your account.
         </p>
-        <h2 className="mt-10 text-justify block text-2xl font-bold text-blue-900">Commodity Trading</h2>
-        <p className="font-light my-4 text-justify">
+        <h2 className="mt-10 block text-justify text-2xl font-bold text-blue-900">
+          Commodity Trading
+        </h2>
+        <p className="my-4 text-justify font-light">
           You can put at least one commercials on our platform when you wish to
           offer to purchase or sell commodities(gold and raw petroleum). We
           reserve the privilege to limit the number of your ads for security
@@ -166,8 +178,10 @@ function Terms() {
           get to and in any case interaction such interchanges as per the
           Privacy Policy.
         </p>
-        <h2 className="mt-10 text-justify block text-2xl font-bold text-blue-900">Advertisement</h2>
-        <p className="font-light my-4 text-justify">
+        <h2 className="mt-10 block text-justify text-2xl font-bold text-blue-900">
+          Advertisement
+        </h2>
+        <p className="my-4 text-justify font-light">
           You can create commodities(gold and crude oil) trade advertisements to
           advertise that you want to buy or sell any commodities. Other users
           can send trade requests to you from the advertisements that you’ve
@@ -244,8 +258,11 @@ function Terms() {
           and security procedures to you unless otherwise provided by the
           Privacy Policy.
         </p>
-        <h2 className="mt-10 text-justify block text-2xl font-bold text-blue-900"> Fees and Pricing</h2>
-        <p className="font-light my-4 text-justify">
+        <h2 className="mt-10 block text-justify text-2xl font-bold text-blue-900">
+          {" "}
+          Fees and Pricing
+        </h2>
+        <p className="my-4 text-justify font-light">
           You consent to pay the fees for the utilization of the Services as per
           the value list which is accessible on our site. Such charges may
           incorporate expenses for incoming and outgoing transactions and rate
@@ -256,8 +273,10 @@ function Terms() {
           standards of evaluating occasionally as per the terms of this
           Agreement.
         </p>
-        <h2 className="mt-10 text-justify block text-2xl font-bold text-blue-900">Intellectual Property Rights</h2>
-        <p className="font-light my-4 text-justify">
+        <h2 className="mt-10 block text-justify text-2xl font-bold text-blue-900">
+          Intellectual Property Rights
+        </h2>
+        <p className="my-4 text-justify font-light">
           You recognize and concur that all copyrights, brand names and any
           remaining protected innovation rights in and identified with this site
           and our administrations are only the property of MetalCharts and our
@@ -267,8 +286,10 @@ function Terms() {
           administration, just as related substance, materials and data
           exclusively for affirmed purposes as allowed by us now and again.
         </p>
-        <h2 className="mt-10 text-justify block text-2xl font-bold text-blue-900">Disclaimer of Warranties and Limitation of Liability</h2>
-        <p className="font-light my-4 text-justify">
+        <h2 className="mt-10 block text-justify text-2xl font-bold text-blue-900">
+          Disclaimer of Warranties and Limitation of Liability
+        </h2>
+        <p className="my-4 text-justify font-light">
           This site and the services are provided on a basis without any
           representation or endorsement. To the most extreme degree allowed by
           pertinent law, we make no guarantees of any sort, regardless of
@@ -284,12 +305,12 @@ function Terms() {
           payments methods recorded on the site or their particular brand name
           proprietors.
         </p>
-        <p className="font-light my-4 text-justify">
-          MetalCharts isn&apos;t liable for any client created content on its site
-          including yet not restricted to messages, criticisms or commercials
-          and may eliminate said content without notice (except if such
-          notification is needed by pertinent law) or risk whenever in its sole
-          discretion.
+        <p className="my-4 text-justify font-light">
+          MetalCharts isn&apos;t liable for any client created content on its
+          site including yet not restricted to messages, criticisms or
+          commercials and may eliminate said content without notice (except if
+          such notification is needed by pertinent law) or risk whenever in its
+          sole discretion.
           <br />
           MetalCharts maintains all authority to alter or end, incidentally or
           for all time, all or any piece of this site as well as any
@@ -302,13 +323,16 @@ function Terms() {
           which are relevant for our services.
         </p>
 
-        <h2 className="mt-10 text-justify block text-2xl font-bold text-blue-900"> General</h2>
-        <p className="font-light my-4 text-justify">
+        <h2 className="mt-10 block text-justify text-2xl font-bold text-blue-900">
+          {" "}
+          General
+        </h2>
+        <p className="my-4 text-justify font-light">
           We may allocate any of our privileges and commitments emerging under
-          this Agreement to any gathering whenever, yet this won&apos;t influence
-          your privileges or our commitments under this Agreement. You may not
-          however move or assign any of your privileges or commitments under
-          this Agreement to any other party. <br /> This Agreement and any
+          this Agreement to any gathering whenever, yet this won&apos;t
+          influence your privileges or our commitments under this Agreement. You
+          may not however move or assign any of your privileges or commitments
+          under this Agreement to any other party. <br /> This Agreement and any
           record explicitly alluded to in them contains the whole arrangement
           and comprehension among you and us in regard of all issue which are
           alluded to thus and overrides any earlier composed or oral
@@ -316,9 +340,9 @@ function Terms() {
           oral data given by both of us will modify the understanding of this
           Agreement. <br />
           You affirm that, in consenting to acknowledge this Agreement, you have
-          not depended on any portrayal that isn&apos;t explicitly included thus.
-          Nonetheless, nothing in this Agreement implies prohibiting risk for
-          any fake assertion or act.
+          not depended on any portrayal that isn&apos;t explicitly included
+          thus. Nonetheless, nothing in this Agreement implies prohibiting risk
+          for any fake assertion or act.
           <br />
           These Terms of Service, Privacy Policy and Acceptable Use Policy are
           written in English. If any part of the provision of this Agreement is

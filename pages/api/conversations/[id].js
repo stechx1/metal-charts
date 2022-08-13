@@ -7,15 +7,14 @@ export default async function handler(req, res) {
   try {
     // database
     await database();
-    
+
     switch (req.method) {
-      // New conversation 
+      // New conversation
       case "GET": {
         const conversations = await Conversation.find({
-          members: { $in: [userId]}
-        })
+          members: { $in: [userId] },
+        });
         res.status(200).json(conversations);
-
       }
     }
   } catch (error) {

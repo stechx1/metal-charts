@@ -3,9 +3,10 @@ import { string } from "yup";
 const Schema = mongoose.Schema;
 
 const buySchema = new Schema({
-  buyer:{ //buyer token
+  buyer: {
+    //buyer token
     type: String,
-    required:true,
+    required: true,
   },
   amount: {
     type: Number,
@@ -20,7 +21,8 @@ const buySchema = new Schema({
     type: String,
     required: true,
   },
-  payment:{  //payment trx id
+  payment: {
+    //payment trx id
     type: String,
     required: true,
   },
@@ -34,4 +36,5 @@ const buySchema = new Schema({
   },
 });
 
-export default mongoose.models.buymetalchart || mongoose.model("buymetalchart", buySchema);
+export default mongoose.models.buymetalchart ||
+  mongoose.model("buymetalchart", buySchema);

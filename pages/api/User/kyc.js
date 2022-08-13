@@ -29,7 +29,10 @@ const storage = multer.diskStorage({
     const user = await User.findOne({ token });
     const username = await user.username;
     // const address = `/uploads/users/${username}/kyc`;
-    const address=path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, `/public/uploads/users/${username}/kyc`);
+    const address = path.join(
+      getConfig().serverRuntimeConfig.PROJECT_ROOT,
+      `/public/uploads/users/${username}/kyc`
+    );
     if (!fs.existsSync(address)) {
       fs.mkdirSync(address, { recursive: true });
     }

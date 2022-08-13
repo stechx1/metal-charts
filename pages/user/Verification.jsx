@@ -24,7 +24,7 @@ function UserVerification() {
       setStatus(response.data);
     }
     checkStatus();
-  },[]);
+  }, []);
 
   const submitHandler = async (values) => {
     let formdata = new FormData();

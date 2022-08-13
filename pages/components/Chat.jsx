@@ -137,8 +137,7 @@ function Pop({ open, closeModal }) {
                 setData({ ...data, message: e.target.value });
               }}
               value={data.message}
-            >
-            </textarea>
+            ></textarea>
           </div>
 
           <button

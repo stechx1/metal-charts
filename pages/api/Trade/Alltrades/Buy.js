@@ -51,9 +51,9 @@ export default async function handler(req, res) {
           {
             $project: {
               order_id: 1,
-              status:"$order_status",
+              status: "$order_status",
               created_at: "$order_date",
-              tradewith:1,
+              tradewith: 1,
               amount: 1,
               qty: 1,
               commodity: 1,

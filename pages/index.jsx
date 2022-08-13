@@ -2,14 +2,11 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 function Home() {
-  const router=useRouter();
-  useEffect(()=>{
+  const router = useRouter();
+  useEffect(() => {
     router.replace("/Trade");
-  },[])
-  return (
-    <>
-    </>
-  )
+  }, []);
+  return <></>;
 }
 
 export default Home;

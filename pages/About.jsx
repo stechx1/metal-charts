@@ -2,7 +2,7 @@ function About() {
   return (
     <section className="min-h-screen text-justify">
       <div className="mycontainer">
-        <h1 className="text-blue-900 text-4xl font-bold mt-16">About Us</h1>
+        <h1 className="mt-16 text-4xl font-bold text-blue-900">About Us</h1>
         <div className="">
           <p className="py-2 font-light">
             MetalCharts is a web-based trading platform with a wide variety of
@@ -21,17 +21,40 @@ function About() {
             an open monetary framework all around the world.
           </p>
 
-          <h4 className="text-blue-900 text-2xl font-bold mt-4">Our Services are as follows:</h4>
+          <h4 className="mt-4 text-2xl font-bold text-blue-900">
+            Our Services are as follows:
+          </h4>
           <ul className="list-disc pl-4 font-light">
-            <li className="my-1 ml-1">Enable traders to enhance their portfolios much further and also allowing them to invest their resources into the global commodity market.</li>
-            <li className="my-1 ml-1">To make trading available to anybody at any place and time thereby diminishing reliance on traditional financial organization.</li>
-            <li className="my-1 ml-1">To empower individuals to trade popular assets in the commodity market.</li>
-            <li className="my-1 ml-1">To give brokers the advantage to explore professionally managed portfolios</li>
-            <li className="my-1 ml-1">To purchase, offer, store and exchange through us to different traders. Bringing our clients a unique offering in commodity market trading is only the beginning! Stay Tuned for additional to come…</li>
+            <li className="my-1 ml-1">
+              Enable traders to enhance their portfolios much further and also
+              allowing them to invest their resources into the global commodity
+              market.
+            </li>
+            <li className="my-1 ml-1">
+              To make trading available to anybody at any place and time thereby
+              diminishing reliance on traditional financial organization.
+            </li>
+            <li className="my-1 ml-1">
+              To empower individuals to trade popular assets in the commodity
+              market.
+            </li>
+            <li className="my-1 ml-1">
+              To give brokers the advantage to explore professionally managed
+              portfolios
+            </li>
+            <li className="my-1 ml-1">
+              To purchase, offer, store and exchange through us to different
+              traders. Bringing our clients a unique offering in commodity
+              market trading is only the beginning! Stay Tuned for additional to
+              come…
+            </li>
           </ul>
 
-          <h4 className="text-blue-900 text-2xl font-bold mt-4">Our Values</h4>
-          <p className="font-light">All that is acceptable is based on solid qualities. We consider these the MetalCharts DNA.</p>
+          <h4 className="mt-4 text-2xl font-bold text-blue-900">Our Values</h4>
+          <p className="font-light">
+            All that is acceptable is based on solid qualities. We consider
+            these the MetalCharts DNA.
+          </p>
         </div>
       </div>
     </section>

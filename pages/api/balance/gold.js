@@ -12,10 +12,13 @@ export default async function handler(req, res) {
       case "GET": {
         const token = getCookie("user", { req, res });
 
-        const balance = await UserCommodity.findOne({
-          token: token,
-          commodity: "gold",
-        }, "amount");
+        const balance = await UserCommodity.findOne(
+          {
+            token: token,
+            commodity: "gold",
+          },
+          "amount"
+        );
 
         return res.send(balance);
       }

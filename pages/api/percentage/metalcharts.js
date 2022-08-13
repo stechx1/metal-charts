@@ -26,7 +26,7 @@ export default async function handler(req, res) {
             { commodity: data.commodity },
             {
               percentage: data.percentage,
-              modified_at: Date.now()
+              modified_at: Date.now(),
             },
             { new: true, upsert: true }
           );

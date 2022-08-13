@@ -436,7 +436,6 @@ function SellGold({ price, percentage }) {
                 </p>
               </label>
             </div>
-
           </div>
         </div>
 

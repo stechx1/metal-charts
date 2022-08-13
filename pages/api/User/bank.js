@@ -16,7 +16,8 @@ export default async function handler(req, res) {
       }
       case "POST": {
         const token = getCookie("user", { req, res });
-        const { id, name, email, account, bank, type, currency } = await req.body;
+        const { id, name, email, account, bank, type, currency } =
+          await req.body;
 
         const isExist = await Bank.findOne({ token });
 
@@ -66,7 +67,7 @@ export default async function handler(req, res) {
       }
     }
   } catch (error) {
-    console.log({ message: error.message })
+    console.log({ message: error.message });
     res.status(400).json({ message: error.message });
   }
 }

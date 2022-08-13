@@ -78,9 +78,6 @@ export default function AllTrades() {
           </div>
         </div>
 
-
-
-
         {orderType.type ? (
           <SellOrders order={orderType} data={data.sell} />
         ) : (

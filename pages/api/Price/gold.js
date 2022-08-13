@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   try {
     // database
     await database();
-    
+
     switch (req.method) {
       case "GET": {
         const price = await Price.findOne({ name: "gold" });

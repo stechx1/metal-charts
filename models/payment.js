@@ -3,11 +3,13 @@ import { string } from "yup";
 const Schema = mongoose.Schema;
 
 const paymentSchema = new Schema({
-  paye: {//who made payment - user token
+  paye: {
+    //who made payment - user token
     type: String,
     required: true,
   },
-  trx: { //paystack reference id
+  trx: {
+    //paystack reference id
     type: String,
     required: true,
   },

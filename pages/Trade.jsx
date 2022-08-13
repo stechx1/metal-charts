@@ -157,7 +157,7 @@ function P2PWorks() {
               <p className="text-justify font-light">
                 <b>We have a method of purchasing commodity:</b>
                 <br />
-                  Purchase PEER 2 PEER
+                Purchase PEER 2 PEER
                 <br />
               </p>
 
@@ -265,7 +265,9 @@ function P2PWorks() {
               information about buyers and sellers.
             </p>
             <p>
-              So you can buy commodity  with the method the seller provided and start trading on Metalcharts peer-to-peer to make a crypto-fiat transaction.
+              So you can buy commodity with the method the seller provided and
+              start trading on Metalcharts peer-to-peer to make a crypto-fiat
+              transaction.
             </p>
           </div>
         </div>

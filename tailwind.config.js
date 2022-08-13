@@ -5,10 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage:{
-        'sell': "url('/imgs/buycommodity.jpeg')",
-      }
+      backgroundImage: {
+        sell: "url('/imgs/buycommodity.jpeg')",
+      },
     },
   },
   plugins: [],
-}
+};

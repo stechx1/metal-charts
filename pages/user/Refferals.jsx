@@ -1,18 +1,18 @@
-import Image from  "next/image";
-import refferalImg from  "../../public/imgs/refferal.png";
-import earningImg from  "../../public/imgs/earning.png";
- 
-function Refferals() { 
-  return ( 
-    <section>  
+import Image from "next/image";
+import refferalImg from "../../public/imgs/refferal.png";
+import earningImg from "../../public/imgs/earning.png";
+
+function Refferals() {
+  return (
+    <section>
       <div className="mycontainer min-h-screen">
         <div className="mx-auto mt-16 text-center">
           <h1 className="text-4xl font-bold text-blue-900">Referrals</h1>
           <p>All your referral information</p>
         </div>
-  
-        <div className="flex flex-col lg:flex-row justify-between">
-          <div className="my-8 w-full flex flex-col md:flex-row lg:flex-col justify-between space-y-4 lg:w-[49%] ">
+
+        <div className="flex flex-col justify-between lg:flex-row">
+          <div className="my-8 flex w-full flex-col justify-between space-y-4 md:flex-row lg:w-[49%] lg:flex-col ">
             <div className="w-full">
               <h2 className="text-2xl font-semibold text-blue-900">
                 Share Your Link
@@ -36,8 +36,10 @@ function Refferals() {
             </div>
           </div>
 
-          <div className="my-8 flex w-full flex-col justify-center space-y-4 lg:w-[49%] lg:flex-row lg:space-y-0
-           lg:space-x-4">
+          <div
+            className="my-8 flex w-full flex-col justify-center space-y-4 lg:w-[49%] lg:flex-row lg:space-y-0
+           lg:space-x-4"
+          >
             <Card
               title={"Refferals"}
               img={refferalImg}
@@ -51,7 +53,6 @@ function Refferals() {
               op={"Dollars"}
             />
           </div>
-
         </div>
 
         <div className="">

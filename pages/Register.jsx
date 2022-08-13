@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import Router from "next/router";
 import axios from "axios";
 
-
 function Register() {
   const [error, setError] = useState();
   const [phoneInput, setPhoneInput] = useState();
@@ -154,11 +153,7 @@ function Register() {
               <label htmlFor="referral">
                 Enter Referral Code <span className="text-xs">(optional)</span>:
               </label>
-              <Field
-                type="text"
-                name="referral"
-                placeholder="6 Digit Code"
-              />
+              <Field type="text" name="referral" placeholder="6 Digit Code" />
               <span className="error">
                 <ErrorMessage name="referral" />
               </span>

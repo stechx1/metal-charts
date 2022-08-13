@@ -1,16 +1,20 @@
-import React from 'react'
+import React from "react";
 
-const RecieverMessage = ({recieverName, messageDetail}) => {
+const RecieverMessage = ({ recieverName, messageDetail }) => {
   return (
     <div className="chat-message">
-         <div className="flex items-end">
-            <div className="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
-              <span className="font-bold">{recieverName}</span>
-               <div><span className="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">{messageDetail}</span></div>
-            </div>
-         </div>
+      <div className="flex items-end">
+        <div className="order-2 mx-2 flex max-w-xs flex-col items-start space-y-2 text-xs">
+          <span className="font-bold">{recieverName}</span>
+          <div>
+            <span className="inline-block rounded-lg rounded-bl-none bg-gray-300 px-4 py-2 text-gray-600">
+              {messageDetail}
+            </span>
+          </div>
+        </div>
       </div>
-  )
-}
+    </div>
+  );
+};
 
-export default RecieverMessage
+export default RecieverMessage;

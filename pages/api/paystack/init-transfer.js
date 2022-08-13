@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       case "POST": {
         const { recipient, amount } = req.body;
         const data = JSON.stringify({
-          source: "balance", 
+          source: "balance",
           // currency: "NGN",
           reason: "MetalChart Trade",
           // amount: amount,
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
           {
             headers: {
               Authorization: "Bearer " + process.env.SECRET_KEY,
-              "Content-Type": 'application/json'
+              "Content-Type": "application/json",
             },
           }
         );

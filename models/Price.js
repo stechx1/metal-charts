@@ -1,20 +1,19 @@
-import mongoose from 'mongoose';
-const Schema=mongoose.Schema;
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
 
 const priceSchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   price: {
     type: String,
     required: true,
   },
-  updated_at:{
-      type: Date,
-      default: Date.now()
-  }
+  updated_at: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
-
-export default mongoose.models.price || mongoose.model('price', priceSchema)
+export default mongoose.models.price || mongoose.model("price", priceSchema);

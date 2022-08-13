@@ -15,14 +15,14 @@ function Privacy() {
                 {" "}
                 1.1
               </span>
-              MetalCharts (&quot;We&quot; or &quot;MetalCharts &quot;) are focused on defending the
-              security of our data subjects (&quot;You&quot; or &quot;User&quot;); in this policy,
-              we clarify how your own information, which means any data
-              identifying with you as a recognized or recognizable
-              characteristic individual, and your electronic interchanges as a
-              natural or lawful individual, that we may hold, is gathered,
-              utilized, stored, revealed, and removed (each and all referred to
-              as &quot;Processing&quot;).
+              MetalCharts (&quot;We&quot; or &quot;MetalCharts &quot;) are
+              focused on defending the security of our data subjects
+              (&quot;You&quot; or &quot;User&quot;); in this policy, we clarify
+              how your own information, which means any data identifying with
+              you as a recognized or recognizable characteristic individual, and
+              your electronic interchanges as a natural or lawful individual,
+              that we may hold, is gathered, utilized, stored, revealed, and
+              removed (each and all referred to as &quot;Processing&quot;).
             </p>
             <p className="font-light">
               <span className="mr-2 inline-block font-bold text-blue-900">
@@ -38,13 +38,13 @@ function Privacy() {
                 {" "}
                 1.3.
               </span>{" "}
-              This Policy just applies to data we measure. It doesn&apos;t make a
-              difference to the acts of organizations that we don&apos;t possess or
-              control, or representatives that we don&apos;t oversee. Information on
-              our services may contain links to third party websites, and any
-              information you provide to those sites will be covered by any
-              privacy policies they may have. Please be sure to read the privacy
-              policies of any third-party sites you visit
+              This Policy just applies to data we measure. It doesn&apos;t make
+              a difference to the acts of organizations that we don&apos;t
+              possess or control, or representatives that we don&apos;t oversee.
+              Information on our services may contain links to third party
+              websites, and any information you provide to those sites will be
+              covered by any privacy policies they may have. Please be sure to
+              read the privacy policies of any third-party sites you visit
             </p>
             <p className="font-light">
               <span className="mr-2 inline-block font-bold text-blue-900">
@@ -84,16 +84,16 @@ function Privacy() {
                   2.2.
                 </span>{" "}
                 We may process your personal identification information
-                (&quot;Personal Identification Information&quot;). Personal identification
-                information may include your full name, email address, username,
-                telephone number, country of residence, date of birth, age,
-                nationality, gender, utility bills, photographs and/or home
-                address. <br /> The source of the personal identification
-                information is you. The personal identification information may
-                be processed for the purposes of providing our services,
-                communicating with you, protecting our users from illegal
-                activity, maintaining legal and regulatory compliance and
-                helping us to prevent, detect and investigate fraud, money
+                (&quot;Personal Identification Information&quot;). Personal
+                identification information may include your full name, email
+                address, username, telephone number, country of residence, date
+                of birth, age, nationality, gender, utility bills, photographs
+                and/or home address. <br /> The source of the personal
+                identification information is you. The personal identification
+                information may be processed for the purposes of providing our
+                services, communicating with you, protecting our users from
+                illegal activity, maintaining legal and regulatory compliance
+                and helping us to prevent, detect and investigate fraud, money
                 laundering and/or other criminal activity or misuse of our
                 service. <br />
                 The legal bases for this processing are the performance of a
@@ -144,19 +144,19 @@ function Privacy() {
                   2.4.
                 </span>
                 We may process data relating to the trades that you conduct
-                through our website (&quot;Trade Information&quot;). The trade information
-                may include trade ID, initiated trades, payment method,
-                advertisement information, buyer username, seller username,
-                trade value (in fiat), trade value (in gold), gold price,
-                currency, timestamps of trade and trade chats. The source of the
-                trade information is you and/or your trading partner. The legal
-                bases for this processing are the performance of a contract
-                between the user and MetalCharts; and compliance with a legal
-                obligation that MetalCharts is subject to, namely in order to
-                comply with anti-money laundering and anti-terrorist financing
-                laws and legitimate interests of ours and/or by third-parties,
-                namely to prevent, detect and investigate fraud, criminal
-                activity or other misuse of the services.
+                through our website (&quot;Trade Information&quot;). The trade
+                information may include trade ID, initiated trades, payment
+                method, advertisement information, buyer username, seller
+                username, trade value (in fiat), trade value (in gold), gold
+                price, currency, timestamps of trade and trade chats. The source
+                of the trade information is you and/or your trading partner. The
+                legal bases for this processing are the performance of a
+                contract between the user and MetalCharts; and compliance with a
+                legal obligation that MetalCharts is subject to, namely in order
+                to comply with anti-money laundering and anti-terrorist
+                financing laws and legitimate interests of ours and/or by
+                third-parties, namely to prevent, detect and investigate fraud,
+                criminal activity or other misuse of the services.
               </p>
               <p className="font-light">
                 <span className="mr-2 inline-block font-bold text-blue-900">
@@ -164,8 +164,8 @@ function Privacy() {
                 </span>{" "}
                 We may process data relating to gold transactions in and out of
                 your commodities portfolio (&quot;Commodities Transaction
-                Information&quot;). Information stored on received transactions may
-                include a timestamp, any commodity amount, deposit address,
+                Information&quot;). Information stored on received transactions
+                may include a timestamp, any commodity amount, deposit address,
                 transaction ID and other publicly available data from the
                 commodities portfolio. Withdrawal transactions may include data
                 such as timestamp, gold amount, sent address, transaction ID,
@@ -186,29 +186,30 @@ function Privacy() {
                 We may process information contained in or relating to any
                 communication (including any electronic communications) that you
                 send to us or that you generate through the use of our service
-                (&quot;Communication Information&quot;). Communication information
-                includes 1) all your messages, requests and other communication
-                with our customer support which may happen during the dispute
-                review process or via support tickets, emails, or by means of
-                any other communication tool; and 2) all your communication and
-                file attachments that you generate when conducting trades with
-                other users (&quot;Trade Chat Messages&quot;) or other data that you
-                generate mainly by communicating to other users. MetalCharts is
-                a party to such communications, including but not limited to the
-                trade chat messages, which MetalCharts necessarily must be able
-                to review and process in order to provide its services to you
-                (including but not limited to dispute review and dispute
-                resolution). As a party to such communications MetalCharts may
-                review and otherwise process any contents and metadata of
-                messages comprised in the communication information.
-                Communication information may include, email address, username,
-                IP address, full name, audio and video files as well as photos
-                of the user’s personal ID, photo of the user, and photo of the
-                user’s utility bill or related documents. The source of the
-                communication information is you and/or your trading partner.
-                The communication information may be processed for the purposes
-                of communicating with you, record-keeping, in order to review
-                and resolve disputes, serve our customers better and improve our
+                (&quot;Communication Information&quot;). Communication
+                information includes 1) all your messages, requests and other
+                communication with our customer support which may happen during
+                the dispute review process or via support tickets, emails, or by
+                means of any other communication tool; and 2) all your
+                communication and file attachments that you generate when
+                conducting trades with other users (&quot;Trade Chat
+                Messages&quot;) or other data that you generate mainly by
+                communicating to other users. MetalCharts is a party to such
+                communications, including but not limited to the trade chat
+                messages, which MetalCharts necessarily must be able to review
+                and process in order to provide its services to you (including
+                but not limited to dispute review and dispute resolution). As a
+                party to such communications MetalCharts may review and
+                otherwise process any contents and metadata of messages
+                comprised in the communication information. Communication
+                information may include, email address, username, IP address,
+                full name, audio and video files as well as photos of the user’s
+                personal ID, photo of the user, and photo of the user’s utility
+                bill or related documents. The source of the communication
+                information is you and/or your trading partner. The
+                communication information may be processed for the purposes of
+                communicating with you, record-keeping, in order to review and
+                resolve disputes, serve our customers better and improve our
                 service. The legal basis for this processing is our legitimate
                 interests, namely the proper administration of our website and
                 business, and compliance with a legal obligation that
@@ -221,17 +222,17 @@ function Privacy() {
                 </span>
                 We may process information that you provide to us for the
                 purpose of subscribing to our email notifications, SMS
-                notifications and/or newsletters (&quot;Notification Information&quot;).
-                The notification information may include your email address,
-                phone number, username and full name. The notification
-                information may be processed for the purposes of sending you the
-                relevant notifications and/or newsletters. The legal basis for
-                this processing is your consent (when required by law), the
-                performance of a contract between you and us and our legitimate
-                interest to communicate with our customers and to perform direct
-                marketing where allowed by law without consent. You can
-                unsubscribe at any point by contacting us or by clicking the
-                unsubscribe link in an email sent by us.
+                notifications and/or newsletters (&quot;Notification
+                Information&quot;). The notification information may include
+                your email address, phone number, username and full name. The
+                notification information may be processed for the purposes of
+                sending you the relevant notifications and/or newsletters. The
+                legal basis for this processing is your consent (when required
+                by law), the performance of a contract between you and us and
+                our legitimate interest to communicate with our customers and to
+                perform direct marketing where allowed by law without consent.
+                You can unsubscribe at any point by contacting us or by clicking
+                the unsubscribe link in an email sent by us.
               </p>
               <p className="font-light">
                 <span className="mr-2 inline-block font-bold text-blue-900">
@@ -555,10 +556,10 @@ function Privacy() {
                   5.4.
                 </span>{" "}
                 You may exercise any of your rights in relation to your personal
-                data by contacting our customer support. Concerning &quot;Right to
-                erasure&quot; users are also able to request the deletion of their
-                account through our site. Further, you can also remove some of
-                your personal data yourself through your user account.
+                data by contacting our customer support. Concerning &quot;Right
+                to erasure&quot; users are also able to request the deletion of
+                their account through our site. Further, you can also remove
+                some of your personal data yourself through your user account.
               </p>
             </div>
           </div>
@@ -579,19 +580,19 @@ function Privacy() {
                 what data they accumulate, how we use it and why we in some
                 cases need to store these cookies. We will likewise share how
                 you can prevent these cookies from being stored, in any case,
-                this may downgrade or break certain components of the site&apos;s
-                functionality.
+                this may downgrade or break certain components of the
+                site&apos;s functionality.
               </p>
               <p className="font-light">
-                Cookies may be either &quot;persistent&quot; cookies or &quot;session&quot; cookies:
-                a persistent cookie will be stored by a web browser and will
-                remain valid until its set expiry date unless deleted by the
-                user before the expiry date; a session cookie, on the other
-                hand, will expire at the end of the user session, when the web
-                browser is closed. Cookies do not typically contain any
-                information that personally identifies a user, but personal
-                information that we store about you may be linked to the
-                information stored in and obtained from cookies.
+                Cookies may be either &quot;persistent&quot; cookies or
+                &quot;session&quot; cookies: a persistent cookie will be stored
+                by a web browser and will remain valid until its set expiry date
+                unless deleted by the user before the expiry date; a session
+                cookie, on the other hand, will expire at the end of the user
+                session, when the web browser is closed. Cookies do not
+                typically contain any information that personally identifies a
+                user, but personal information that we store about you may be
+                linked to the information stored in and obtained from cookies.
               </p>
               <p className="font-light">
                 <span className="mr-2 inline-block font-bold text-blue-900">
@@ -651,7 +652,11 @@ function Privacy() {
               <span className="mr-2 inline-block font-bold text-blue-900">
                 7.1.
               </span>
-              The data controller responsible for your personal data is MetalCharts, you can reach out to us via Whatsapp, Telegram, Instagram and Twitter If you have any questions about Metalcharts. Your rights and/or our data collection practices, please contact our customer care support@metalcharts.net
+              The data controller responsible for your personal data is
+              MetalCharts, you can reach out to us via Whatsapp, Telegram,
+              Instagram and Twitter If you have any questions about Metalcharts.
+              Your rights and/or our data collection practices, please contact
+              our customer care support@metalcharts.net
             </p>
           </div>
         </div>
