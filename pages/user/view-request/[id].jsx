@@ -111,12 +111,13 @@ const ViewRequest = ({data, banks}) => {
         </div>
       </div>
 
-      {trade.status == "pending" ? (
         <>
           <div className="flex mt-4">
+      {trade.status == "pending" && (
             <button className="btn-primary px-6" onClick={approve}>
               I recieved the payment
             </button>
+      )}
             <button
               className="btn-primary bg-red-500 hover:bg-red-600 px-6"
               onClick={() => router.push('/chat')}
@@ -125,9 +126,6 @@ const ViewRequest = ({data, banks}) => {
             </button>
           </div>
         </>
-      ) : (
-        ""
-      )}
     </div>
   </div>
   )

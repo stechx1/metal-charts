@@ -30,7 +30,7 @@ function Forgetpassword() {
           onSubmit={submitHandler}
         >
           <Form
-            className="mx-auto mt-20 flex flex-col rounded-lg
+            className="mx-auto flex flex-col rounded-lg
                 border border-blue-900 px-4 py-8 shadow-xl md:w-1/2 lg:px-8 lg:py-16"
           >
             <h1 className="mb-4 text-center text-xl font-bold text-blue-900 lg:text-3xl">

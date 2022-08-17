@@ -81,7 +81,7 @@ export default function Transactions() {
   return (
     <div className="w-[1290px] mx-auto min-h-screen py-6 px-4 ">
       <h1 className="text-3xl font-bold border-b border-[#131722] pb-6">
-        Transaction Requests
+        Trade Requests
       </h1>
 
       <div className="flex flex-col h-screen ">

@@ -1,17 +1,30 @@
 import axios, { Axios } from "axios";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 const BuyFromSeller = (props) => {
+  const [paidSeller, setPaidSeller] = useState(false);
   const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
   const [sellerBankDetails, setSellerBankDetails] = useState();
   const [sellingCommodityDetails, setsellingCommodityDetails] = useLocalStorage(
     "sellingCommodityDetails",
     ""
   );
+  const [trxId, setTrxId] = useState('');
 
   const router = useRouter();
+
+  const submitHandler = async() => {
+    const data = {
+      trx_id: trxId,
+      _id: sellingCommodityDetails._id
+    }
+    const response = await axios.put("/api/Trade/Sell", data);
+    console.log(response);
+    alert("Seller has been notified of your payment")
+  }
 
   useEffect(() => {
     const getBankDetails = async () => {
@@ -26,8 +39,8 @@ const BuyFromSeller = (props) => {
 
   return (
     <div className="my-[100px] flex">
-      <div className="mx-auto max-w-[990px] content-center justify-center bg-slate-200">
-        <div className="p-4">
+      <div className="rounded mx-auto max-w-[990px] content-center justify-center bg-slate-200">
+        <div className="p-6">
           <p className="text-xl">
             Transfer Money To Account Number{" "}
             <span className="font-bold">{sellerBankDetails?.account}</span>
@@ -39,7 +52,7 @@ const BuyFromSeller = (props) => {
             exactly with the amount{" "}
             <span className="font-bold">
                {sellerBankDetails?.currency} 4179
-            </span>
+            </span> and quantity <span className="font-bold">{sellingCommodityDetails?.qty}</span>
           </p>
           <p className="text-xl">
             exactly with the content{" "}
@@ -57,16 +70,44 @@ const BuyFromSeller = (props) => {
               Chat with seller
             </button>
             <button
-              onClick={() =>
-                alert(
-                  "Seller has been informed about your payment. Once seller approve your payment you will be redirected"
-                )
+              onClick={() =>{
+                setPaidSeller(true);
+              }
               }
               className={`border-8 bg-blue-900 py-2 px-4 text-white`}
             >
               I have paid the seller
             </button>
           </div>
+      {paidSeller && (
+        <Formik
+        initialValues={{
+          id: "",
+        }}
+        onSubmit={submitHandler}
+      >
+        <Form
+        className="mx-auto mt-20 flex flex-col rounded-lg
+            border border-blue-900 px-4 py-8 shadow-xl md:w-1/2 lg:px-8 lg:py-16"
+      >
+        <div className="input_group">
+        <label htmlFor="id">Enter Your Transaction ID:</label>
+        <Field type="text" value={trxId} onChange={(e) => setTrxId(e.target.value)} name="id" placeholder="Transaction ID" />
+
+        <span className="error">
+          <ErrorMessage name="id" />
+        </span>
+      </div>
+
+      <div className="buttons">
+              <button type="submit" className="btn-primary mt-4 px-4">
+                Submit
+              </button>
+            </div>
+
+      </Form>
+  </Formik>
+      )}
         </div>
       </div>
     </div>
