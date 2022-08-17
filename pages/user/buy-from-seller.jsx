@@ -24,6 +24,7 @@ const BuyFromSeller = (props) => {
     const response = await axios.put("/api/Trade/Sell", data);
     console.log(response);
     alert("Seller has been notified of your payment")
+    router.push('/user/requests')
   }
 
   useEffect(() => {

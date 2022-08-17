@@ -56,7 +56,7 @@ export default function Transactions() {
       name: "Edit",
       selector: (row) => (
         <>
-          <a onClick={() => {
+          <a className="cursor-pointer" onClick={() => {
             setRecieverToken(row.buyerToken[0]);
             router.push(`/user/view-request/${row._id}`)
           }} target="_blank">
@@ -69,7 +69,7 @@ export default function Transactions() {
       name: "Chat",
       selector: (row) => (
         <>
-          <a onClick={() => {
+          <a className="cursor-pointer" onClick={() => {
             setRecieverToken(row.buyerToken[0]);
             router.push("/chat")
           }} target="_blank">
@@ -80,7 +80,64 @@ export default function Transactions() {
     },
   ];
 
+  const buyColumns = [
+    {
+      name: "Trx Id",
+      selector: (row) => row.trx_id,
+      sortable: true,
+    },
+    {
+      name: "Buyer",
+      selector: (row) => {
+        return <span className="uppercase">{row.buyer}</span>;
+      }, //key for data
+      sortable: true,
+    },
+    {
+      name: "Quantity",
+      selector: (row) => {
+        return row.qty.toFixed(5);
+      },
+      sortable: true,
+    },
+    {
+      name: "Seller",
+      selector: (row) => {
+        return <span className="uppercase">{row.seller}</span>;
+      },
+      sortable: true,
+    },
+    {
+      name: "Date",
+      selector: (row) => {
+        return new Date(row.created_at).toDateString();
+      },
+      sortable: true,
+    },
+    {
+      name: "Trx Status",
+      selector: (row) => {
+        return <span className="uppercase">{row.status}</span>;
+      },
+      sortable: true,
+    },
+    {
+      name: "Chat",
+      selector: (row) => (
+        <>
+          <a className="cursor-pointer" onClick={() => {
+            setRecieverToken(row.sellerToken[0]);
+            router.push("/chat")
+          }} target="_blank">
+            <Image src={"/imgs/chat.svg"} alt="chat" width="20px" height="20px" />
+          </a>
+        </>
+      ),
+    },
+  ];
+
   const [data, setData] = useState([]);
+  const [buyData, setBuyData] = useState([]);
   const [filterText, setFilterText] = useState("");
 
   useEffect(() => {
@@ -98,13 +155,29 @@ export default function Transactions() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    async function fetchData() {
+      console.log("User ID", user?.token)
+      const response = await axios.get(`/api/Trade/admin/Buy`, { params: { token: user?.token } });
+      if (response.status === 200) {
+        response.data.map((item) => {
+          setBuyData((prev) => {
+            return [...prev, item];
+          });
+        });
+      }
+    }
+    fetchData();
+  }, []);
+
   return (
-    <div className="w-[1290px] mx-auto min-h-screen py-6 px-4 ">
+    <>
+    <div className="w-[1290px] mx-auto pt-6 px-4 ">
       <h1 className="text-3xl font-bold border-b border-[#131722] pb-6">
         Sell Requests
       </h1>
 
-      <div className="flex flex-col h-screen ">
+      <div className="flex flex-col ">
 
         <DataTable
           columns={columns}
@@ -116,6 +189,29 @@ export default function Transactions() {
         />
       </div>
     </div>
+
+
+    <div className="w-[1290px] mx-auto min-h-screen mt-9 px-4 ">
+      <h1 className="text-3xl font-bold border-b border-[#131722] pb-6">
+        Buy Requests Sent
+      </h1>
+
+      <div className="flex flex-col ">
+
+        <DataTable
+          columns={buyColumns}
+          data={buyData.filter((item) => {
+            return item.trx_id && item.trx_id.toString().includes(filterText);
+          })}
+          pagination
+          persistTableHead
+        />
+      </div>
+    </div>
+
+
+
+    </>
   );
 }
 
