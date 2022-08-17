@@ -8,6 +8,7 @@ import Message from "./components/Messages/Message";
 const ChatPage = () => {
   const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
   const [recieverDetails, setRecieverDetails] = useState();
+  const [recieverId, setRecieverId] = useState();
   const [user, setUser] = useState();
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
@@ -23,6 +24,7 @@ const ChatPage = () => {
       });
       console.log("Response Data", response.data);
       setRecieverDetails(response.data);
+      setRecieverId(response.data._id)
     };
     getRecieverDetails();
   }, []);
@@ -63,48 +65,47 @@ const ChatPage = () => {
   //   }
   // }, [conversation]);
 
-  async function createConversation(){
-    const data = {
-      senderId: user._id,
-      recieverId: recieverDetails._id
-    }
-    const res = await axios.post("/api/conversation/create", data);
-    console.log(res.data)
-    return res.data;
-  }
-
   useEffect(() => {
-    if (conversation !== null) {
+    if (conversation !== null && conversation.length > 0 &&  user?._id !== undefined && user?._id !== null && recieverDetails?._id !== undefined && recieverDetails?._id !== null) {
+      console.log(conversation)
       const conversations = conversation.filter(
         (c) =>
           c.members.includes(user?._id) &&
           c.members.includes(recieverDetails?._id)
       );
-      if(conversations.length < 0){
-        createConversation();
+      if(conversations.length == 0){
+        async function createConversation(){
+          const data = {
+            senderId: user?._id,
+            receiverId: recieverDetails?._id
+          }
+          const res = await axios.post("/api/conversations/create", data);
+          setConversationId(res.data._id);
+        }
+        createConversation()
       } else {
         setConversationId(conversations[0]?._id);
+        console.log("Found conversation")
       }
     }
   }, [conversation]);
 
+  const getMessages = async () => {
+    try {
+      const res = await axios.get("/api/messages/" + conversationId);
+      setMessages(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   useEffect(() => {
-    const getMessages = async () => {
-      try {
-        const res = await axios.get("/api/messages/" + conversationId);
-        setMessages(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
     getMessages();
   }, [conversationId]);
 
   function Messages() {
     useInterval(() => {
-      // getMessages();
-      console.log("HEy i m here")
-    }, 5000);
+      getMessages();
+    }, 8000);
   }
 
   Messages();

@@ -52,7 +52,9 @@ const BuyFromSeller = (props) => {
             exactly with the amount{" "}
             <span className="font-bold">
                {sellerBankDetails?.currency} 4179
-            </span> and quantity <span className="font-bold">{sellingCommodityDetails?.qty}</span>
+            </span> or <span className="font-bold">
+               $ {sellingCommodityDetails.amount}
+            </span>  and you would get <span className="font-bold">{sellingCommodityDetails.commodity}</span> <p>quantity <span className="font-bold">{sellingCommodityDetails?.qty}</span></p>
           </p>
           <p className="text-xl">
             exactly with the content{" "}

@@ -414,6 +414,30 @@ function BuyUKOIL() {
 }
 
 function BuyUkoilCard({ name, data }) {
+  const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
+  const [sellingCommodityDetails, setsellingCommodityDetails] = useLocalStorage(
+    "sellingCommodityDetails",
+    ""
+  );
+  const [user, setUser] = useLocalStorage("user", {})
+  const router = useRouter();
+
+  const placeOrder = async (data) => {
+    const newOrder = {
+      sellerId: data._id,
+      buyerId: user._id,
+      amount: data.amount,
+      qty: data.qty,
+      commodity: data.commodity,
+      duration: data.duration,
+    }
+    try{
+      const res = await axios.post("/api/order/create", newOrder);
+      console.log(res.data)
+    } catch(err){
+      console.log(err)
+    }
+  }
   // initalizing paystack payment
   const config = {
     publicKey: "pk_test_25f1390fdb194da4c07d224401eb1e748fff82b1",
@@ -431,7 +455,12 @@ function BuyUkoilCard({ name, data }) {
   // initiate payment popup
   const buynow = async () => {
     if (bank.email) {
-      initializePayment(onSuccess, onClose);
+      console.log("Data from buy now", data);
+      // initializePayment(onSuccess, onClose);
+      setRecieverToken(data.seller);
+      setsellingCommodityDetails(data);
+      placeOrder(data);
+      router.push("/user/buy-from-seller");
     } else {
       alert(
         "You cant buy right now, firstly goto Dashboard -> Profile -> Bank and complete your bank account details"
