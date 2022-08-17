@@ -232,7 +232,7 @@ function BuyGold() {
 
 
 function BuyGoldCard({ name, data }) {
-  const [sellerToken, setSellerToken] = useLocalStorage("sellerToken", "");
+  const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
   const [sellingCommodityDetails, setsellingCommodityDetails] = useLocalStorage(
     "sellingCommodityDetails",
     ""
@@ -278,7 +278,7 @@ function BuyGoldCard({ name, data }) {
     if (bank.email) {
       console.log("Data from buy now", data);
       // initializePayment(onSuccess, onClose);
-      setSellerToken(data.seller);
+      setRecieverToken(data.seller);
       setsellingCommodityDetails(data);
       placeOrder(data);
       router.push("/user/buy-from-seller");

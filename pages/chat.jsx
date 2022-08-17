@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Message from "./components/Messages/Message";
 
 const ChatPage = () => {
-  const [sellerToken, setSellerToken] = useLocalStorage("sellerToken", "");
+  const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
   const [sellerDetails, setSellerDetails] = useState();
   const [user, setUser] = useState();
   const [messages, setMessages] = useState([]);
@@ -18,7 +18,7 @@ const ChatPage = () => {
     const getSellerDetails = async () => {
       const response = await axios("/api/Seller/details", {
         method: "POST",
-        data: { sellerToken },
+        data: { sellerToken : recieverToken },
       });
       console.log("Response Data", response.data);
       setSellerDetails(response.data);

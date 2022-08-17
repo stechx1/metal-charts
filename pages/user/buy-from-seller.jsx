@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 const BuyFromSeller = (props) => {
-  const [sellerToken, setSellerToken] = useLocalStorage("sellerToken", "");
+  const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
   const [sellerBankDetails, setSellerBankDetails] = useState();
   const [sellingCommodityDetails, setsellingCommodityDetails] = useLocalStorage(
     "sellingCommodityDetails",
@@ -17,7 +17,7 @@ const BuyFromSeller = (props) => {
     const getBankDetails = async () => {
       const response = await axios("/api/Seller", {
         method: "POST",
-        data: { sellerToken },
+        data: { sellerToken: recieverToken },
       });
       setSellerBankDetails(response.data);
     };
