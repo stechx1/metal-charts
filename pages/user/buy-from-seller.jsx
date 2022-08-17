@@ -6,6 +6,10 @@ import { useLocalStorage } from "../../hooks/useLocalStorage";
 const BuyFromSeller = (props) => {
   const [sellerToken, setSellerToken] = useLocalStorage("sellerToken", "");
   const [sellerBankDetails, setSellerBankDetails] = useState();
+  const [sellingCommodityDetails, setsellingCommodityDetails] = useLocalStorage(
+    "sellingCommodityDetails",
+    ""
+  );
 
   const router = useRouter();
 
@@ -34,7 +38,7 @@ const BuyFromSeller = (props) => {
           <p className="text-xl">
             exactly with the amount{" "}
             <span className="font-bold">
-              4179 {sellerBankDetails?.currency}
+               {sellerBankDetails?.currency} 4179
             </span>
           </p>
           <p className="text-xl">

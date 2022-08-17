@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import RealTimeWidget from "../components/RealTimeWidget";
 import CurrencyInput from "react-currency-input-field";
-import Popup from "reactjs-popup";
 import axios from "axios";
 
 let bank; //user bank details

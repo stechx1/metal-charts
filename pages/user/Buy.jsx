@@ -229,12 +229,16 @@ function BuyGold() {
   );
 }
 
+
+
 function BuyGoldCard({ name, data }) {
   const [sellerToken, setSellerToken] = useLocalStorage("sellerToken", "");
   const [sellingCommodityDetails, setsellingCommodityDetails] = useLocalStorage(
     "sellingCommodityDetails",
     ""
   );
+  const [user, setUser] = useLocalStorage("user", {})
+
   const router = useRouter();
   // initalizing paystack payment
   const config = {
@@ -252,6 +256,23 @@ function BuyGoldCard({ name, data }) {
 
   const qty = parseFloat(data.qty);
 
+  const placeOrder = async (data) => {
+    const newOrder = {
+      sellerId: data._id,
+      buyerId: user._id,
+      amount: data.amount,
+      qty: data.qty,
+      commodity: data.commodity,
+      duration: data.duration,
+    }
+    try{
+      const res = await axios.post("/api/order/create", newOrder);
+      console.log(res.data)
+    } catch(err){
+      console.log(err)
+    }
+  }
+
   // initiate payment popup
   const buynow = async () => {
     if (bank.email) {
@@ -259,6 +280,7 @@ function BuyGoldCard({ name, data }) {
       // initializePayment(onSuccess, onClose);
       setSellerToken(data.seller);
       setsellingCommodityDetails(data);
+      placeOrder(data);
       router.push("/user/buy-from-seller");
     } else {
       alert(
@@ -373,7 +395,7 @@ function BuyUKOIL() {
                             name={item.username}
                             data={row}
                             key={id}
-                          />
+                          />fenter
                         </>
                       );
                     })

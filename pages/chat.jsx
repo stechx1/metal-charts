@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import axios, { Axios } from "axios";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import Message from "./components/Messages/Message";
 

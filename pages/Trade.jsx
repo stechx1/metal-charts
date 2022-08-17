@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Trading from "./components/Trading";
 import think_rich from "../public/imgs/think_rich.jpg";
+import axios from "axios";
+
 import buy from "../public/imgs/buy.png";
 import sell from "../public/imgs/sell.png";
 import register from "../public/imgs/registration.png";
@@ -10,11 +12,28 @@ import sellcommodity from "../public/imgs/sellcommodity.png";
 import buycommodity from "../public/imgs/buycommodity.png";
 import buyviap2p from "../public/imgs/buyviap2p.png";
 import { useQuery } from "react-query";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useEffect } from "react";
 
 function Trade() {
   const { isLoading, data } = useQuery("user", () => {
     return axios.get("/api/User/cookie", { staleTime: 600000 });
   });
+
+  const [user, setUser] = useLocalStorage("user", {});
+
+  useEffect(() => {
+    async function fetchUser() {
+      const response = await axios("/api/User/profile");
+      // console.log(response.data);
+      if (response.status == 200) {
+        setUser(response.data);
+      } else {
+        console.log(error);
+      }
+    }
+    fetchUser();
+  }, []);
 
   // console.log(data);
 
