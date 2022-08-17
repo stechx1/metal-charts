@@ -11,6 +11,8 @@ export default async function handler(req, res) {
 
     switch (req.method) {
       case "GET": {
+        const { token } = await req.query;
+
         let data = await Buyp2p.aggregate([
           // getting seller name
           {
@@ -29,11 +31,13 @@ export default async function handler(req, res) {
               },
             },
           },
-          { $project: { sell: 0 } },
+          // { $project: { sell: 0 } },
           {
             $project: {
               orderid: 1,
               seller: "$username",
+              sellerId: "$sell._id",
+              sellerToken: "$sell.token",
               status: 1,
               buyer: 1,
               created_at: 1,
@@ -57,13 +61,16 @@ export default async function handler(req, res) {
               },
             },
           },
-          { $project: { buy: 0 } },
+          // { $project: { buy: 0 } },
           {
             $project: {
               orderid: 1,
               seller: 1,
+              sellerId: 1,
+              sellerToken: 1,
               status: 1,
               buyer: "$username",
+              buyerId: "$buy._id",
               created_at: 1,
               trx_id: 1,
             },
@@ -94,31 +101,40 @@ export default async function handler(req, res) {
               buyer: 1,
               trx_id: 1,
               created_at: 1,
+              sellerId: 1,
+              buyerId: 1,
+              sellerToken: 1,
             },
           },
         ]);
+        data = data
+          .filter((item) => item.sellerToken[0] == token)
+          .map((item) => {
+            delete item.sellerToken;
+            return item;
+          });
         return res.status(200).send(data);
       }
-    //   case "POST": {
-    //     const { data } = await req.body;
-    //     console.log(data);
+      //   case "POST": {
+      //     const { data } = await req.body;
+      //     console.log(data);
 
-    //     const sellData = new Sell({
-    //       // admin token
-    //       seller:
-    //         "$2a$ivpedBMCbfvKW5310$Q5gGcVz/1brCTJ4/k.lrHnEQIczzvjGBxBom/.",
-    //       tradewith: "peer2peer",
-    //       amount: data.price,
-    //       qty: data.quantity,
-    //       commodity: data.commodity,
-    //       duration: data.duration,
-    //       status: data.status,
-    //     });
+      //     const sellData = new Sell({
+      //       // admin token
+      //       seller:
+      //         "$2a$ivpedBMCbfvKW5310$Q5gGcVz/1brCTJ4/k.lrHnEQIczzvjGBxBom/.",
+      //       tradewith: "peer2peer",
+      //       amount: data.price,
+      //       qty: data.quantity,
+      //       commodity: data.commodity,
+      //       duration: data.duration,
+      //       status: data.status,
+      //     });
 
-    //     const response = await sellData.save();
+      //     const response = await sellData.save();
 
-    //     return res.status(201).send(response);
-    //   }
+      //     return res.status(201).send(response);
+      //   }
       case "PUT": {
         const data = await req.body;
         console.log(data);
