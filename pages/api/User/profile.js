@@ -21,6 +21,7 @@ export default async function handler(req, res) {
               _id: 1,
               name: 1,
               email: 1,
+              token: 1,
               username: 1,
               refferal: 1,
               phone: 1,

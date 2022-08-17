@@ -4,8 +4,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Image from "next/image";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { useRouter } from "next/router";
 
 export default function Transactions() {
+  const [user, setUser] = useLocalStorage("user", "");
+  const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
+  const router = useRouter();
   const columns = [
     {
       name: "Trx Id",
@@ -48,13 +53,29 @@ export default function Transactions() {
       sortable: true,
     },
     {
-      name: "",
+      name: "Edit",
       selector: (row) => (
-        <Link href={`/user/view-request/${row._id}`}>
-          <a target="_blank">
-            <Image src={"/imgs/open.png"} alt="menu" width="15px" height="15px" />
+        <>
+          <a onClick={() => {
+            setRecieverToken(row.buyerToken[0]);
+            router.push(`/user/view-request/${row._id}`)
+          }} target="_blank">
+            <Image src={"/imgs/open.png"} alt="chat" width="20px" height="20px" />
           </a>
-        </Link>
+        </>
+      ),
+    },
+    {
+      name: "Chat",
+      selector: (row) => (
+        <>
+          <a onClick={() => {
+            setRecieverToken(row.buyerToken[0]);
+            router.push("/chat")
+          }} target="_blank">
+            <Image src={"/imgs/chat.svg"} alt="chat" width="20px" height="20px" />
+          </a>
+        </>
       ),
     },
   ];
@@ -64,9 +85,8 @@ export default function Transactions() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(`/api/Trade/admin/Sell`);
-      console.log("Response", response.data);
-
+      console.log("User ID", user?.token)
+      const response = await axios.get(`/api/Trade/admin/Sell`, { params: { token: user?.token } });
       if (response.status === 200) {
         response.data.map((item) => {
           setData((prev) => {
@@ -81,7 +101,7 @@ export default function Transactions() {
   return (
     <div className="w-[1290px] mx-auto min-h-screen py-6 px-4 ">
       <h1 className="text-3xl font-bold border-b border-[#131722] pb-6">
-        Trade Requests
+        Sell Requests
       </h1>
 
       <div className="flex flex-col h-screen ">
@@ -89,7 +109,6 @@ export default function Transactions() {
         <DataTable
           columns={columns}
           data={data.filter((item) => {
-            console.log(item);
             return item.trx_id && item.trx_id.toString().includes(filterText);
           })}
           pagination
