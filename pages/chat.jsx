@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useInterval } from "../hooks/useInterval";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Message from "./components/Messages/Message";
@@ -62,6 +63,16 @@ const ChatPage = () => {
   //   }
   // }, [conversation]);
 
+  async function createConversation(){
+    const data = {
+      senderId: user._id,
+      recieverId: recieverDetails._id
+    }
+    const res = await axios.post("/api/conversation/create", data);
+    console.log(res.data)
+    return res.data;
+  }
+
   useEffect(() => {
     if (conversation !== null) {
       const conversations = conversation.filter(
@@ -69,9 +80,11 @@ const ChatPage = () => {
           c.members.includes(user?._id) &&
           c.members.includes(recieverDetails?._id)
       );
-      // if(conversations.length < 0)
-      console.log("Conversations", conversations)
-      // setConversationId(conversations[0]?._id);
+      if(conversations.length < 0){
+        createConversation();
+      } else {
+        setConversationId(conversations[0]?._id);
+      }
     }
   }, [conversation]);
 
@@ -86,6 +99,15 @@ const ChatPage = () => {
     };
     getMessages();
   }, [conversationId]);
+
+  function Messages() {
+    useInterval(() => {
+      // getMessages();
+      console.log("HEy i m here")
+    }, 5000);
+  }
+
+  Messages();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
