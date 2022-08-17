@@ -6,7 +6,7 @@ import Message from "./components/Messages/Message";
 
 const ChatPage = () => {
   const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
-  const [sellerDetails, setSellerDetails] = useState();
+  const [recieverDetails, setRecieverDetails] = useState();
   const [user, setUser] = useState();
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
@@ -15,15 +15,15 @@ const ChatPage = () => {
   const [currentMessage, setCurrentMessage] = useState("");
 
   useEffect(() => {
-    const getSellerDetails = async () => {
+    const getRecieverDetails = async () => {
       const response = await axios("/api/Seller/details", {
         method: "POST",
         data: { sellerToken : recieverToken },
       });
       console.log("Response Data", response.data);
-      setSellerDetails(response.data);
+      setRecieverDetails(response.data);
     };
-    getSellerDetails();
+    getRecieverDetails();
   }, []);
 
   useEffect(() => {
@@ -51,14 +51,27 @@ const ChatPage = () => {
     getConversations();
   }, [user?._id]);
 
+  // useEffect(() => {
+  //   if (conversation !== null) {
+  //     const conversations = conversation.filter(
+  //       (c) =>
+  //         c.members.includes(user?._id) &&
+  //         c.members.includes(recieverDetails?._id)
+  //     );
+  //     setConversationId(conversations[0]?._id);
+  //   }
+  // }, [conversation]);
+
   useEffect(() => {
     if (conversation !== null) {
       const conversations = conversation.filter(
         (c) =>
           c.members.includes(user?._id) &&
-          c.members.includes(sellerDetails?._id)
+          c.members.includes(recieverDetails?._id)
       );
-      setConversationId(conversations[0]?._id);
+      // if(conversations.length < 0)
+      console.log("Conversations", conversations)
+      // setConversationId(conversations[0]?._id);
     }
   }, [conversation]);
 
@@ -99,7 +112,7 @@ const ChatPage = () => {
             <div className="flex flex-col leading-tight">
               <div className="mt-1 flex items-center text-2xl">
                 <span className="mr-3 text-gray-700">
-                  Chat with {sellerDetails?.name}
+                  Chat with {recieverDetails?.name}
                 </span>
               </div>
             </div>
@@ -118,7 +131,7 @@ const ChatPage = () => {
             <Message
               key={m._id}
               senderName={user?.name}
-              receiverName={sellerDetails.name}
+              receiverName={recieverDetails.name}
               message={m}
               own={m.sender === user?._id}
             />

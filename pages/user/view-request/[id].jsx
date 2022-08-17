@@ -3,10 +3,12 @@ import axios from "axios";
 import Buyp2p from "../../../models/Buyp2p";
 import SellPercentage from "../../../models/SellPercentage";
 import { useRouter } from "next/router";
+import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
 
 const ViewRequest = ({data, banks}) => {
   const router = useRouter();
+  const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
   const [trade, setTrade] = useState(JSON.parse(data)[0]);
   const [uBanks, setUBanks] = useState(JSON.parse(banks));
 
@@ -43,7 +45,7 @@ const ViewRequest = ({data, banks}) => {
   // };
 
   return (
-    <div className="w-full h-screen overflow-y-scroll py-6 px-4">
+    <div className="w-[1200px] mx-auto h-screen overflow-y-scroll py-6 px-4">
     <h1 className="text-3xl font-bold border-b border-[#131722] pb-6">
       View Request
     </h1>
