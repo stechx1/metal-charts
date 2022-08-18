@@ -428,7 +428,7 @@ function SellGold({ price, percentage }) {
                  hover:bg-gray-100 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-green-500"
               >
                 <h2 className="text-center text-base font-semibold">
-                  Peer 2 Peer
+                  Create Trade
                 </h2>
               </label>
             </div>
@@ -711,7 +711,7 @@ function SellUkoil({ price, percentage }) {
                  hover:bg-gray-100 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-green-500"
               >
                 <h2 className="text-center text-base font-semibold">
-                  Peer 2 Peer
+                  Create Trade
                 </h2>
               </label>
             </div>
