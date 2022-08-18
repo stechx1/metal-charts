@@ -430,9 +430,6 @@ function SellGold({ price, percentage }) {
                 <h2 className="text-center text-base font-semibold">
                   Peer 2 Peer
                 </h2>
-                <p className="text-center text-xs">
-                  Transaction Fee: {percentage.p2p}%
-                </p>
               </label>
             </div>
           </div>
@@ -440,7 +437,7 @@ function SellGold({ price, percentage }) {
 
         {data.amount > 0 ? (
           <div className="text-white">
-            <p>You will receive ${finalValue.toFixed(2)}</p>
+            <p>You will receive ${data.amount}</p>
           </div>
         ) : (
           ""
@@ -716,38 +713,6 @@ function SellUkoil({ price, percentage }) {
                 <h2 className="text-center text-base font-semibold">
                   Peer 2 Peer
                 </h2>
-                <p className="text-center text-xs">
-                  Transaction Fee: {percentage.p2p}%
-                </p>
-              </label>
-            </div>
-
-            <div className="ml-1 flex w-1/2">
-              <input
-                type="radio"
-                name="type"
-                id="metalcharts"
-                className="peer sr-only"
-                value="metalcharts"
-                onChange={(e) => {
-                  setData((prev) => {
-                    return { ...prev, to: e.target.value };
-                  });
-                }}
-                checked={data.to === "metalcharts"}
-              />
-
-              <label
-                htmlFor="metalcharts"
-                className="flex h-full w-full cursor-pointer flex-col rounded-lg border-2 border-gray-300 p-2 text-blue-800
-                 hover:bg-gray-100 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-green-500"
-              >
-                <h2 className="text-center text-base font-semibold">
-                  Metalcharts
-                </h2>
-                <p className="text-center text-xs">
-                  Transaction Fee: {percentage.metalcharts}%
-                </p>
               </label>
             </div>
           </div>
@@ -755,7 +720,7 @@ function SellUkoil({ price, percentage }) {
 
         {data.amount > 0 ? (
           <div className="text-white">
-            <p>You will receive ${finalValue.toFixed(2)}</p>
+            <p>You will receive ${data.amount}</p>
           </div>
         ) : (
           ""
