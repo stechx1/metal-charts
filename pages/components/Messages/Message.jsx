@@ -20,7 +20,7 @@ const Message = ({ senderName, receiverName, message, own }) => {
                 own ? "bg-blue-600" : "bg-gray-300 text-gray-600"
               } text-white`}
             >
-              {message.text}
+              {message?.text}
             </span>
           </div>
         </div>

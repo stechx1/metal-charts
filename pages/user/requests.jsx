@@ -2,7 +2,6 @@
 import DataTable from "react-data-table-component";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Link from "next/link";
 import Image from "next/image";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { useRouter } from "next/router";
@@ -28,6 +27,13 @@ export default function Transactions() {
       name: "Quantity",
       selector: (row) => {
         return row.qty.toFixed(5);
+      },
+      sortable: true,
+    },
+    {
+      name: "Amount",
+      selector: (row) => {
+        return `$${row.amount}`;
       },
       sortable: true,
     },
@@ -97,6 +103,13 @@ export default function Transactions() {
       name: "Quantity",
       selector: (row) => {
         return row.qty.toFixed(5);
+      },
+      sortable: true,
+    },
+    {
+      name: "Amount",
+      selector: (row) => {
+        return `$${row.amount}`;
       },
       sortable: true,
     },

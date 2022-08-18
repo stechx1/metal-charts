@@ -104,6 +104,7 @@ export default async function handler(req, res) {
               created_at: 1,
               sellerId: 1,
               buyerId: 1,
+              amount: 1,
               sellerToken: 1,
               buyerToken: 1,
             },
