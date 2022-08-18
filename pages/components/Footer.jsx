@@ -37,12 +37,6 @@ function Footer() {
                 Social Handles
               </h3>
               <div className="flex flex-col">
-                <Link href="https://wa.link/3ypjta">
-                  <a className="nav-item" target="_blank">
-                    WhatsApp
-                  </a>
-                </Link>
-
                 <Link href="https://t.me/MetalChartsVIP">
                   <a className="nav-item" target="_blank">
                     Telegram
