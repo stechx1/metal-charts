@@ -53,10 +53,9 @@ const BuyFromSeller = (props) => {
             exactly with the amount{" "}
             <span className="font-bold">
                {sellerBankDetails?.currency} 4179
-            </span> or <span className="font-bold">
+            </span> <p>Exactly with the amount<span className="font-bold">
                $ {sellingCommodityDetails.amount}
-            </span>  and you would get <span className="font-bold">{sellingCommodityDetails.commodity}</span> <p>quantity <span className="font-bold">{sellingCommodityDetails?.qty}</span></p>
-          </p>
+            </span></p>   and you would get <span className="font-bold">{(sellingCommodityDetails.commodity).toUpperCase()}</span> quantity <span className="font-bold">{sellingCommodityDetails?.qty}</span></p>
           <p className="text-xl">
             exactly with the content{" "}
             <span className="font-bold">{sellerBankDetails?.name}</span>
