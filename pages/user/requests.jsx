@@ -185,7 +185,7 @@ export default function Transactions() {
 
   return (
     <>
-    <div className="w-[1290px] mx-auto pt-6 px-4 ">
+    {user._id? (<><div className="w-[1290px] mx-auto pt-6 px-4 ">
       <h1 className="text-3xl font-bold border-b border-[#131722] pb-6">
         Sell Requests
       </h1>
@@ -220,10 +220,7 @@ export default function Transactions() {
           persistTableHead
         />
       </div>
-    </div>
-
-
-
+    </div></>)  : (<p>Login to see requests</p>)}
     </>
   );
 }
