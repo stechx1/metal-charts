@@ -403,38 +403,6 @@ function SellGold({ price, percentage }) {
           )}
         </div>
 
-        <div className="mt-4 flex flex-col">
-          <label className="text-white">Selling to?</label>
-
-          <div className="my-2 flex">
-            <div className="mr-1 flex w-1/2">
-              <input
-                type="radio"
-                name="type"
-                id="p2p"
-                value="peer2peer"
-                onChange={(e) => {
-                  setData((prev) => {
-                    return { ...prev, to: e.target.value };
-                  });
-                }}
-                className="peer sr-only"
-                checked={data.to === "peer2peer"}
-              />
-
-              <label
-                htmlFor="p2p"
-                className="flex h-full w-full cursor-pointer flex-col rounded-lg border-2 border-gray-300 p-2 text-blue-800
-                 hover:bg-gray-100 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-green-500"
-              >
-                <h2 className="text-center text-base font-semibold">
-                  Create Trade
-                </h2>
-              </label>
-            </div>
-          </div>
-        </div>
-
         {data.amount > 0 ? (
           <div className="text-white">
             <p>You will receive ${data.amount}</p>

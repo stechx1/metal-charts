@@ -55,22 +55,17 @@ const BuyFromSeller = (props) => {
                {sellerBankDetails?.currency} 4179
             </span> <p>Exactly with the amount<span className="font-bold">
                $ {sellingCommodityDetails.amount}
-            </span></p>   and you would get <span className="font-bold">{(sellingCommodityDetails.commodity).toUpperCase()}</span> quantity <span className="font-bold">{sellingCommodityDetails?.qty}</span></p>
+            </span></p>  <p><span className="font-bold">{(sellingCommodityDetails.commodity).toUpperCase()}</span> quantity <span className="font-bold">{sellingCommodityDetails?.qty}</span></p></p>
           <p className="text-xl">
             exactly with the content{" "}
             <span className="font-bold">{sellerBankDetails?.name}</span>
           </p>
 
           <p className="mt-2">to be confirmed with this transaction</p>
+          <p>Pay the amount to be able to chat with the seller</p>
           <br />
           <br />
           <div className="flex">
-            <button
-              onClick={() => router.push("/chat")}
-              className={`border-8 bg-white py-2 px-4 text-blue-900`}
-            >
-              Chat with seller
-            </button>
             <button
               onClick={() =>{
                 setPaidSeller(true);
