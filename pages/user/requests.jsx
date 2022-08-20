@@ -185,13 +185,12 @@ export default function Transactions() {
 
   return (
     <>
-    {user._id? (<><div className="w-[1290px] mx-auto pt-6 px-4 ">
+    {user._id? (<>
+      <div className="m-6 md:m-16">
+
       <h1 className="text-3xl font-bold border-b border-[#131722] pb-6">
         Sell Requests
       </h1>
-
-      <div className="flex flex-col ">
-
         <DataTable
           columns={columns}
           data={data.filter((item) => {
@@ -201,16 +200,12 @@ export default function Transactions() {
           persistTableHead
         />
       </div>
-    </div>
 
+      <div className="m-6 md:m-16">
 
-    <div className="w-[1290px] mx-auto min-h-screen mt-9 px-4 ">
       <h1 className="text-3xl font-bold border-b border-[#131722] pb-6">
         Buy Requests Sent
       </h1>
-
-      <div className="flex flex-col ">
-
         <DataTable
           columns={buyColumns}
           data={buyData.filter((item) => {
@@ -219,8 +214,8 @@ export default function Transactions() {
           pagination
           persistTableHead
         />
-      </div>
-    </div></>)  : (<p>Login to see requests</p>)}
+        </div>
+   </>)  : (<p>Login to see requests</p>)}
     </>
   );
 }

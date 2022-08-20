@@ -171,13 +171,13 @@ const ChatPage = () => {
               placeholder="Write your message!"
               className="w-full rounded-md bg-gray-200 py-3 pl-12 text-gray-600 placeholder-gray-600 focus:placeholder-gray-400 focus:outline-none"
             />
-            <div className="absolute inset-y-0 right-0 hidden items-center sm:flex">
+            <div className="absolute inset-y-0 right-0 items-center sm:flex">
               <button
                 onClick={handleSubmit}
                 type="button"
                 className="inline-flex items-center justify-center rounded-lg bg-blue-500 px-4 py-3 text-white transition duration-500 ease-in-out hover:bg-blue-400 focus:outline-none"
               >
-                <span>Send</span>
+                <span className="hidden">Send</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
