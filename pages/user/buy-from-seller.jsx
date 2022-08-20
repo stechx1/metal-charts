@@ -63,7 +63,7 @@ const BuyFromSeller = (props) => {
               {sellerBankDetails?.currency} 4179
             </span>{" "}
           </p>
-          <p>
+          <p className="text-xl">
             Exactly with the amount
             <span className="font-bold">
               $ {sellingCommodityDetails.amount}
