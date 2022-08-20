@@ -16,10 +16,10 @@ export default async function handler(req, res) {
       });
 
       if (balance && balance.amount >= orderData.qty) {
-      const newOrder = new Order(order);
-      const savedOrder = await newOrder.save();
-      return res.status(200).json(savedOrder);
-    }
+        const newOrder = new Order(order);
+        const savedOrder = await newOrder.save();
+        return res.status(200).json(savedOrder);
+      }
     }
   } catch (err) {
     console.log(err);

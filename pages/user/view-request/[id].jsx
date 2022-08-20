@@ -5,10 +5,12 @@ import SellPercentage from "../../../models/SellPercentage";
 import { useRouter } from "next/router";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
-
-const ViewRequest = ({data, banks}) => {
+const ViewRequest = ({ data, banks }) => {
   const router = useRouter();
-  const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
+  const [recieverToken, setRecieverToken] = useLocalStorage(
+    "recieverToken",
+    ""
+  );
   const [trade, setTrade] = useState(JSON.parse(data)[0]);
   const [uBanks, setUBanks] = useState(JSON.parse(banks));
 
@@ -46,94 +48,93 @@ const ViewRequest = ({data, banks}) => {
 
   return (
     <div className="w-[1200px] mx-auto h-screen overflow-y-scroll py-6 px-4">
-    <h1 className="text-3xl font-bold border-b border-[#131722] pb-6">
-      View Request
-    </h1>
+      <h1 className="text-3xl font-bold border-b border-[#131722] pb-6">
+        View Request
+      </h1>
 
-    <div className="">
-      <div className="flex flex-col mt-4">
-        <h4 className="text-xl font-semibold ">Trade Details:</h4>
-        <div className="flex">
-          <div className="my-2 w-1/2 flex flex-col">
-            <b>Amount:</b>{" "}
-            <span className="uppercase bg-gray-200 p-2 rounded-md">
-              ${trade.amount} 
-            </span>
+      <div className="">
+        <div className="flex flex-col mt-4">
+          <h4 className="text-xl font-semibold ">Trade Details:</h4>
+          <div className="flex">
+            <div className="my-2 w-1/2 flex flex-col">
+              <b>Amount:</b>{" "}
+              <span className="uppercase bg-gray-200 p-2 rounded-md">
+                ${trade.amount}
+              </span>
+            </div>
+            <div className="my-2 w-1/2 flex flex-col ml-2">
+              <b>Quantity:</b>{" "}
+              <span className="uppercase bg-gray-200 p-2 rounded-md">
+                {trade.qty}
+              </span>
+            </div>
           </div>
-          <div className="my-2 w-1/2 flex flex-col ml-2">
-            <b>Quantity:</b>{" "}
-            <span className="uppercase bg-gray-200 p-2 rounded-md">
-              {trade.qty}
-            </span>
+
+          <div className="flex">
+            <div className="my-2 w-1/2 flex flex-col">
+              <b>Commodity: </b>
+              <span className="uppercase bg-gray-200 p-2 rounded-md">
+                {trade.commodity}
+              </span>
+            </div>
+            <div className="my-2 w-1/2 flex flex-col ml-2">
+              <b>Status:</b>
+              <span className="uppercase bg-gray-200 p-2 rounded-md">
+                {trade.status}
+              </span>
+            </div>
           </div>
         </div>
 
-        <div className="flex">
-          <div className="my-2 w-1/2 flex flex-col">
-            <b>Commodity: </b>
-            <span className="uppercase bg-gray-200 p-2 rounded-md">
-              {trade.commodity}
-            </span>
+        <div className="flex flex-col mt-4">
+          <h4 className="text-xl font-semibold">Buyer Details:</h4>
+
+          <div className="flex">
+            <div className="my-2 w-1/2 flex flex-col">
+              <b>Account Holder Name: </b>
+              <span className="uppercase bg-gray-200 p-2 rounded-md">
+                {trade.b_b_name}
+              </span>
+            </div>
+            <div className="my-2 w-1/2 flex flex-col ml-2">
+              <b>Account Holder Email: </b>
+              <span className="uppercase bg-gray-200 p-2 rounded-md">
+                {trade.b_b_email}
+              </span>
+            </div>
           </div>
-          <div className="my-2 w-1/2 flex flex-col ml-2">
-            <b>Status:</b>
-            <span className="uppercase bg-gray-200 p-2 rounded-md">
-              {trade.status}
-            </span>
+
+          <div className="flex">
+            <div className="my-2 w-1/2 flex flex-col">
+              <b>Transaction Id: </b>
+              <span className="uppercase bg-gray-200 p-2 rounded-md">
+                {trade.trx_id}
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-
-
-      <div className="flex flex-col mt-4">
-        <h4 className="text-xl font-semibold">Buyer Details:</h4>
-
-        <div className="flex">
-          <div className="my-2 w-1/2 flex flex-col">
-            <b>Account Holder Name: </b>
-            <span className="uppercase bg-gray-200 p-2 rounded-md">
-              {trade.b_b_name}
-            </span>
-          </div>
-          <div className="my-2 w-1/2 flex flex-col ml-2">
-            <b>Account Holder Email: </b>
-            <span className="uppercase bg-gray-200 p-2 rounded-md">
-              {trade.b_b_email}
-            </span>
-          </div>
-        </div>
-
-        <div className="flex">
-          <div className="my-2 w-1/2 flex flex-col">
-            <b>Transaction Id: </b>
-            <span className="uppercase bg-gray-200 p-2 rounded-md">
-              {trade.trx_id}
-            </span>
-          </div>
-        </div>
-      </div>
 
         <>
           <div className="flex mt-4">
-      {trade.status == "pending" && (
-            <button className="btn-primary px-6" onClick={approve}>
-              I recieved the payment
-            </button>
-      )}
+            {trade.status == "pending" && (
+              <button className="btn-primary px-6" onClick={approve}>
+                I recieved the payment
+              </button>
+            )}
             <button
               className="btn-primary bg-red-500 hover:bg-red-600 px-6"
-              onClick={() => router.push('/chat')}
+              onClick={() => router.push("/chat")}
             >
               Chat with the buyer
             </button>
           </div>
         </>
+      </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default ViewRequest
+export default ViewRequest;
 
 export async function getServerSideProps(context) {
   const params = context.params;

@@ -103,7 +103,7 @@ export default async function handler(req, res) {
               trx_id: 1,
               created_at: 1,
               sellerId: 1,
-              amount:1,
+              amount: 1,
               buyerId: 1,
               buyerToken: 1,
               sellerToken: 1,

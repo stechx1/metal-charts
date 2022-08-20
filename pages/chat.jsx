@@ -6,7 +6,10 @@ import { useEffect, useState } from "react";
 import Message from "./components/Messages/Message";
 
 const ChatPage = () => {
-  const [recieverToken, setRecieverToken] = useLocalStorage("recieverToken", "");
+  const [recieverToken, setRecieverToken] = useLocalStorage(
+    "recieverToken",
+    ""
+  );
   const [recieverDetails, setRecieverDetails] = useState();
   const [recieverId, setRecieverId] = useState();
   const [user, setUser] = useState();
@@ -20,11 +23,11 @@ const ChatPage = () => {
     const getRecieverDetails = async () => {
       const response = await axios("/api/Seller/details", {
         method: "POST",
-        data: { sellerToken : recieverToken },
+        data: { sellerToken: recieverToken },
       });
       console.log("Response Data", response.data);
       setRecieverDetails(response.data);
-      setRecieverId(response.data._id)
+      setRecieverId(response.data._id);
     };
     getRecieverDetails();
   }, []);
@@ -66,26 +69,33 @@ const ChatPage = () => {
   // }, [conversation]);
 
   useEffect(() => {
-    if (conversation !== null && conversation.length > 0 &&  user?._id !== undefined && user?._id !== null && recieverDetails?._id !== undefined && recieverDetails?._id !== null) {
-      console.log(conversation)
+    if (
+      conversation !== null &&
+      conversation.length > 0 &&
+      user?._id !== undefined &&
+      user?._id !== null &&
+      recieverDetails?._id !== undefined &&
+      recieverDetails?._id !== null
+    ) {
+      console.log(conversation);
       const conversations = conversation.filter(
         (c) =>
           c.members.includes(user?._id) &&
           c.members.includes(recieverDetails?._id)
       );
-      if(conversations.length == 0){
-        async function createConversation(){
+      if (conversations.length == 0) {
+        async function createConversation() {
           const data = {
             senderId: user?._id,
-            receiverId: recieverDetails?._id
-          }
+            receiverId: recieverDetails?._id,
+          };
           const res = await axios.post("/api/conversations/create", data);
           setConversationId(res.data._id);
         }
-        createConversation()
+        createConversation();
       } else {
         setConversationId(conversations[0]?._id);
-        console.log("Found conversation")
+        console.log("Found conversation");
       }
     }
   }, [conversation]);
