@@ -30,6 +30,8 @@ function Register() {
     }
     setError("");
     values.phone = phoneInput;
+    let refCode = Math.floor(100000 + Math.random() * 900000);
+    values.refCode = `${refCode}`;
     const response = await axios("api/User", {
       method: "POST",
       data: values,

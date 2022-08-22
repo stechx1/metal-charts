@@ -54,7 +54,7 @@ const ViewRequest = ({ data, banks }) => {
 
       <div className="">
         <div className="flex flex-col mt-4">
-          <h4 className="text-xl font-semibold ">Trade Details:</h4>
+          <h4 className="text-xl font-semibold ">Trade Detdails:</h4>
           <div className="flex">
             <div className="my-2 w-1/2 flex flex-col">
               <b>Amount:</b>{" "}

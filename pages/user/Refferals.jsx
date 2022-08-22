@@ -1,8 +1,25 @@
 import Image from "next/image";
 import refferalImg from "../../public/imgs/refferal.png";
 import earningImg from "../../public/imgs/earning.png";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Refferals() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    async function fetchUser() {
+      const response = await axios("/api/User/profile");
+      // console.log(response.data);
+      if (response.status == 200) {
+        setUser(response.data);
+      } else {
+        console.log(error);
+      }
+    }
+    fetchUser();
+  }, []);
   return (
     <section>
       <div className="mycontainer min-h-screen">
@@ -27,7 +44,7 @@ function Refferals() {
               <div className="flex flex-row justify-between overflow-hidden rounded-md border border-blue-900">
                 <input
                   type="text"
-                  value="https://metalcharts.net/ref/123456"
+                  value={`https://metalcharts.net/ref/${user?.refCode}`}
                   disabled={true}
                   className="w-full px-2 outline-none"
                 />
@@ -43,13 +60,13 @@ function Refferals() {
             <Card
               title={"Refferals"}
               img={refferalImg}
-              val={0}
+              val={user?.referalFriends}
               op={"Friends"}
             />
             <Card
               title={"Total Earned"}
               img={earningImg}
-              val={0}
+              val={user?.earned}
               op={"Dollars"}
             />
           </div>

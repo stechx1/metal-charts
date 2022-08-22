@@ -19,10 +19,10 @@ const BuyFromSeller = (props) => {
   const [trxId, setTrxId] = useState("");
 
   const router = useRouter();
-
-   useEffect(() => {
-      setCommodity(sellingCommodityDetails.commodity);
-    }, []);
+  debugger;
+  useEffect(() => {
+    setCommodity(sellingCommodityDetails.commodity);
+  }, []);
 
   const submitHandler = async () => {
     const data = {
@@ -48,7 +48,7 @@ const BuyFromSeller = (props) => {
 
   return (
     <div className="my-[100px] flex">
-      <div className="rounded mx-auto max-w-[990px] content-center justify-center bg-slate-200">
+      <div className="mx-auto max-w-[990px] content-center justify-center rounded bg-slate-200">
         <div className="p-6">
           <p className="text-xl">
             Transfer Money To Account Number{" "}
@@ -70,10 +70,7 @@ const BuyFromSeller = (props) => {
             </span>
           </p>{" "}
           <p>
-            <span className="font-bold">
-              {commodity}
-            </span>{" "}
-            quantity{" "}
+            <span className="font-bold">{commodity}</span> quantity{" "}
             <span className="font-bold">{sellingCommodityDetails?.qty}</span>
           </p>
           <p className="text-xl">

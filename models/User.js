@@ -28,6 +28,17 @@ const userSchema = new Schema({
   referral: {
     type: String,
   },
+  refCode: {
+    type: String,
+  },
+  referalFriends: {
+    type: Number,
+    default: 0
+  },
+  earned: {
+    type: Number,
+    default: 0
+  },
   role: {
     type: String,
     default: "user",

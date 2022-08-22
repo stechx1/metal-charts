@@ -50,7 +50,7 @@ export default async function handler(req, res) {
       case "POST":
         {
           // user registration
-          const { email, username, name, phone, password, referral } =
+          const { email, username, name, phone, password, referral, refCode } =
             await req.body;
           // #check existing user
           const isExist = await User.findOne({
@@ -69,6 +69,14 @@ export default async function handler(req, res) {
             parseInt(process.env.SALT)
           );
 
+          let ref = referral?.split('/')
+          let refealCode = ref[ref?.length - 1]
+          console.log('refealCode*******************--------***', refealCode)
+          if (referral) {
+            let refUser = await User.findOne({ refCode: refealCode })
+            await User.findByIdAndUpdate(refUser._id, { referalFriends: refUser.referalFriends + 1, earned: refUser.earned + 1 })
+            console.log("refUser", refUser)
+          }
           const userData = await new User({
             email: email.toLowerCase(),
             username: username.toLowerCase(),
@@ -76,6 +84,7 @@ export default async function handler(req, res) {
             phone,
             password,
             referral,
+            refCode,
             token: hashed_token.toString(),
           });
 
