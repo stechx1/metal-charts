@@ -72,7 +72,6 @@ export default function AllTrades() {
                 setOrderType({ ...orderType, from: e.target.value === "true" })
               }
             >
-              <option value={false}>Metalcharts</option>
               <option value={true}>Peer2Peer</option>
             </select>
           </div>
