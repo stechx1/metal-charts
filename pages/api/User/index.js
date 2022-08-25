@@ -74,7 +74,7 @@ export default async function handler(req, res) {
           console.log('refealCode*******************--------***', refealCode)
           if (referral) {
             let refUser = await User.findOne({ refCode: refealCode })
-            await User.findByIdAndUpdate(refUser._id, { referalFriends: refUser.referalFriends + 1, earned: refUser.earned + 1 })
+            await User.findByIdAndUpdate(refUser._id, { referalFriends: refUser.referalFriends + 1, earned: refUser.earned + 5 })
             console.log("refUser", refUser)
           }
           const userData = await new User({
