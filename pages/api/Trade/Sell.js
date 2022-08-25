@@ -256,7 +256,7 @@ export default async function handler(req, res) {
                                 ${foundBuyer?.name} has paid you this ${response?.amount} amount and bought this ${response.qty} quantity of your commodity. Click on the link to view the request
                                 </p>
                                 <a
-                                  href="http://localhost:3001/user/view-request/${buyResponse?._id}"
+                                  href="https://metal-charts-blzv7.ondigitalocean.app/user/view-request/${buyResponse?._id}"
                                   style="
                                     text-align:left;
                                     background: #020b48;

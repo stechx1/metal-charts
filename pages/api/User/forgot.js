@@ -161,7 +161,7 @@ export default async function handler(req, res) {
 
 
                                   <a
-                                    href="http://localhost:3001/reset-password/${user._id}/${response._id}"
+                                    href="https://metal-charts-blzv7.ondigitalocean.app/reset-password/${user._id}/${response._id}"
                                     style="
                                       text-align:left;
                                       background: #020b48;

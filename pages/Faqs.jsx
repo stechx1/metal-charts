@@ -85,7 +85,7 @@ function Faqs() {
     },
     {
       question: "What percentage is the referral bonus?",
-      answer: `Referral bonus is 5%.`,
+      answer: `Referral bonus is 5$.`,
     },
     {
       question: "When can i sell my commodity for payout?",
