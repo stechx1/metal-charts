@@ -35,7 +35,7 @@ function Refferals() {
                 Share Your Link
               </h2>
               Share your personal referral link to social media, your blog,
-              friends and everyone you can think off and earn 5% referral bonus!
+              friends and everyone you can think off and earn $5 referral bonus!
             </div>
             <div className="w-full">
               <h2 className="text-2xl font-semibold text-blue-900">

@@ -158,7 +158,7 @@ function BuyGold() {
   const changeHandler = (e) => {
     // console.log(e)
     if (e < 5) {
-      setError("Amount Must be Morethan 5$");
+      setError("Amount Must be Morethan $5");
     } else if (e > 20000) {
       setError("Amount Must be Lessthan 20000$");
     } else {
@@ -341,7 +341,7 @@ function BuyUKOIL() {
   const changeHandler = (e) => {
     // console.log(e)
     if (e < 5) {
-      setError("Amount Must be More than 5$");
+      setError("Amount Must be More than $5");
     } else if (e > 20000) {
       setError("Amount Must be Less than 20000$");
     } else {

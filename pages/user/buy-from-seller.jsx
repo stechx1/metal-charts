@@ -51,11 +51,19 @@ const BuyFromSeller = (props) => {
       <div className="mx-auto max-w-[990px] content-center justify-center rounded bg-slate-200">
         <div className="p-6">
           <p className="text-xl">
-            Transfer Money To Account Number{" "}
-            <span className="font-bold">{sellerBankDetails?.account}</span>
+            <p>Transfer Money To Account Number <span className="font-bold">{sellerBankDetails?.account}</span>.</p>
+            <p>Bank account name <span className="font-bold">Access Bank</span>.</p>
+            <p>Exactly with the amount <span className="font-bold">NGN 4179</span>.</p>
+            <p>Exactly with the amount <span className="font-bold">
+              $ {sellingCommodityDetails.amount}
+            </span>.</p>
+            <p><span className="font-bold">{commodity}</span> quantity <span className="font-bold">{sellingCommodityDetails?.qty}</span>.</p>
+            <p>Exactly with the content <span className="font-bold">{sellerBankDetails?.name}</span>.</p>
+
+
           </p>
-          <p className="text-xl">
-            Bank account name <span className="font-bold">Access Bank</span>{" "}
+          {/* <p className="text-xl">
+            Bank account name {" "}
           </p>
           <p className="text-xl">
             exactly with the amount{" "}
@@ -78,10 +86,16 @@ const BuyFromSeller = (props) => {
             <span className="font-bold">{sellerBankDetails?.name}</span>
           </p>
           <p className="mt-2">to be confirmed with this transaction</p>
-          <p>Pay the amount to be able to chat with the seller</p>
+          <p>Pay the amount to be able to chat with the seller</p> */}
           <br />
           <br />
           <div className="flex">
+          <button
+              onClick={() => router.push("/chat")}
+              className={`border-8 bg-white py-2 px-4 text-blue-900`}
+            >
+              Chat with seller
+            </button>
             <button
               onClick={() => {
                 setPaidSeller(true);
