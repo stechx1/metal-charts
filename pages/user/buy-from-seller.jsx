@@ -15,6 +15,10 @@ const BuyFromSeller = (props) => {
     "sellingCommodityDetails",
     ""
   );
+  const [usdExchange, setUsdExchange] = useLocalStorage(
+    "usd",
+    ""
+  );
   const [commodity, setCommodity] = useState();
   const [trxId, setTrxId] = useState("");
 
@@ -53,7 +57,7 @@ const BuyFromSeller = (props) => {
           <p className="text-xl">
             <p>Transfer Money To Account Number <span className="font-bold">{sellerBankDetails?.account}</span>.</p>
             <p>Bank account name <span className="font-bold">Access Bank</span>.</p>
-            <p>Exactly with the amount <span className="font-bold">NGN 4179</span>.</p>
+            <p>Exactly with the amount <span className="font-bold">NGN {sellingCommodityDetails.amount * usdExchange}</span>.</p>
             <p>Exactly with the amount <span className="font-bold">
               $ {sellingCommodityDetails.amount}
             </span>.</p>

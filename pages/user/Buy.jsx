@@ -13,6 +13,10 @@ let usd; // exchange rate
 
 function Buy() {
   const [trade, setTrade] = useState(true);
+  const [usdExchange, setUsdExchange] = useLocalStorage(
+    "usd",
+    usd
+  );
   const [prices, setPrices] = useState({
     gold: 0,
     ukoil: 0,
@@ -39,6 +43,7 @@ function Buy() {
 
       bank = bankResponse.data;
       usd = usdResponse.data.price;
+      setUsdExchange(usdResponse.data.price);
     })();
   }, []);
 
@@ -238,6 +243,12 @@ function BuyGoldCard({ name, data }) {
     "sellingCommodityDetails",
     ""
   );
+
+  const [usdExchange, setUsdExchange] = useLocalStorage(
+    "usd",
+    usd
+  );
+
   const [user, setUser] = useLocalStorage("user", {});
 
   const router = useRouter();
@@ -281,6 +292,7 @@ function BuyGoldCard({ name, data }) {
       // initializePayment(onSuccess, onClose);
       setRecieverToken(data.seller);
       setsellingCommodityDetails(data);
+      setUsdExchange(usd);
       placeOrder(data);
       router.push("/user/buy-from-seller");
     } else {
